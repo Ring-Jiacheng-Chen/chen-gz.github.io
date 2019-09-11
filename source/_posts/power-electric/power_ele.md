@@ -1,14 +1,8 @@
 ---
-
----
-
-<!--
-author: 小柯基
 title: power ele
 category: power-electric
-status: publish
-summary: 
--->
+toc: true
+---
 
 *note: most things are copied from book, not write by myself and this book can get from Google. I only copy import things to here and add some comments.*
 
