@@ -6,9 +6,6 @@ toc: true
 
 *note: most things are copied from book, not write by myself and this book can get from Google. I only copy important things to here and add some comments.*
 
-
-# Foundation and Basic Concept
-
 ## symbols
 
 Duty cycle: *D*
@@ -38,9 +35,9 @@ The principles of inductor volt-second balance and capacitor charge balance are 
 
 ## small-ripple and linear-ripple approximation
 
-A useful approximation, the small-ripple or linear-ripple approximation, greatly facilitates the analysis. Some simple methods for selecting the filter element values are also discussed.
-
 ![](https://cdn.mathpix.com/snip/images/UtGYcs5WNOTFcynd9FcgumtN21f0WcJOTF5930TkFKg.original.fullsize.png)
+
+
 
 So it is nearly always a good approximation to assume that the magnitude of the switching ripple is much smaller than the DC component:
 $$
@@ -52,12 +49,20 @@ v(t) \approx V
 $$
 ## inductor voltage and conductor current
 
+### inductor voltage 
+
 The inductor voltage can be found by use of the definition
 $$
 v_{L}(t)=L \frac{d i_{L}(t)}{d t}
 $$
 
+###  Capacitor current
 
+$$
+i_c(t) = C \frac{du_c(t)}{dt}
+$$
+
+## The balance of inductor and capacitor
 
 ### Inductor voltage balance 
 
@@ -93,8 +98,6 @@ The average value, or DC component, of the capacitor current must be zero in equ
 
 ## continue conduction mode 
 
-current must over zero 
-
-if not satisfied continue conduction mode, then when switch to  status 2, two component will off!
+current must over zero, if not satisfied continue conduction mode, then when switch to  status 2, two component will off!
 
 from continue conduction mode we can define $L_{min}$ to satisfy continue conduction mode.

@@ -78,13 +78,13 @@ $$
 
 ## the inductor current ripple $\Delta i_{L}$
 
-since we know the slope of the inductor curring the first subinterval, and we also know the length of the first subinterval, we can calculate the ripple magnitude. The $i_{t}(t)$ waveform is symmetrical about $I,$ and hence during the first so the change in current increases by 2$\Delta i_{L}$ (since $\Delta i_{1}$ is the peak ripple, the peak-to-peak ripple is $ 2 \Delta i_{l}$). So the change in current, $2 \Delta i_{L},$ is equal to the slope (the applied inductor voltage divided by $L$ ) times the length of the first subinterval $\left(D T_{s}\right)$ :
+since we know the slope of the inductor curring the first subinterval, and we also know the length of the first subinterval, we can calculate the ripple magnitude. The $i_{t}(t)$ waveform is symmetrical about $I,$ and hence during the first so the change in current increases by 2$\Delta i_{L}$ (since $\Delta i_{1}$ is the peak ripple, the peak-to-peak ripple is $2\Delta i_{l}$). So the change in current, $2 \Delta i_{L},$ is equal to the slope (the applied inductor voltage divided by $L$ ) times the length of the first subinterval $\left(D T_{s}\right)$ :
 $$
-\left(2 \Delta i_{L}\right)=\left(\frac{V_{x}-V}{L}\right)\left(D T_{\mathrm{s}}\right)
+\left(2 \Delta i_{L}\right)=\left(\frac{V_{g}-V}{L}\right)\left(D T_{\mathrm{s}}\right)
 $$
 
 $$
-\Delta i_{L}=\frac{V_{R}-V}{2 L} D T_{\mathrm{s}}
+\Delta i_{L}=\frac{V_{g}-V}{2 L} D T_{\mathrm{s}}
 $$
 
 ## the Capacitor voltage ripple $\Delta v_{C}$
