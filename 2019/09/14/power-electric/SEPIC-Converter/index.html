@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 3.9.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>Dog and Cat</title>
+
+
+    <meta name="description" content="SEPIC-Converter Single-ended primary-inductor converter Principle when mos on, the circuit work at status 1 from the firgure we can see that we have 3 circle. \[ v_{L1} = V_g \\ i_{C1} = -i_{L2} \appr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dog and Cat">
+<meta property="og:url" content="https://chen-gz.github.io/2019/09/14/power-electric/SEPIC-Converter/index.html">
+<meta property="og:site_name" content="Dog and Cat">
+<meta property="og:description" content="SEPIC-Converter Single-ended primary-inductor converter Principle when mos on, the circuit work at status 1 from the firgure we can see that we have 3 circle. \[ v_{L1} = V_g \\ i_{C1} = -i_{L2} \appr">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://chen-gz.github.io/images/og_image.png">
+<meta property="og:updated_time" content="2019-09-15T19:21:25.033Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dog and Cat">
+<meta name="twitter:description" content="SEPIC-Converter Single-ended primary-inductor converter Principle when mos on, the circuit work at status 1 from the firgure we can see that we have 3 circle. \[ v_{L1} = V_g \\ i_{C1} = -i_{L2} \appr">
+<meta name="twitter:image" content="https://chen-gz.github.io/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/jojo.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+<body class="is-3-column">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/jojo.svg" alt="" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-09-14T14:20:03.617Z">2019-09-14</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 minutes read (About 611 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                
+            
+        </h1>
+        <div class="content">
+            <h2 id="sepic-converter">SEPIC-Converter</h2>
+<p>Single-ended primary-inductor converter</p>
+<p>Principle</p>
+<p>when mos on, the circuit work at status 1</p>
+<p>from the firgure we can see that we have 3 circle. <span class="math display">\[
+v_{L1} = V_g \\
+i_{C1} = -i_{L2} \approx -I_{L2} \\
+v_{L2} = v_{C1} \approx V_{C1} \\
+i_{C2} = -\frac{v_o}{R} \approx -\frac{V_o}{R}
+\]</span></p>
+<p><span class="math display">\[
+\frac{di_{L_1}}{dt} = \frac{v_{L1}}{L_1} = \frac{V_g}{L_1} \\
+\frac{du_{C_1}}{dt} = \frac{i_{C_1}}{C_1} = \frac{-i_{L_2}}{C_1} \approx \frac{-I_{L_2}}{C_1} \\
+\frac{di_{L_2}}{dt} = \frac{v_{L_2}}{L_2} = \frac{v_{C_1}}{L_2} \approx \frac{V_{C_1}}{L_2} \\
+\frac{du_{C_2}}{dt} = \frac{i_{C_2}}{C_2} = -\frac{v_o}{RC_2} \approx -\frac{V_o}{RC_2} \\
+\]</span></p>
+<p>when mos off, the circuit work at status 2</p>
+<p>from the figure we have equations: <span class="math display">\[
+v_{L1} = V_g - v_{C_1} - v_o \approx V_g - V_{C_1} - V_o\\
+i_{C1} = i_{L_1} \approx I_{L_1} \\
+v_{L2} = -v_o \approx -V_o \\
+i_{C2} = i_{L_1} + i_{L_2} - \frac{v_o}{R} \approx I_{L_1} + I_{L_2} - \frac{V_o}{R}
+\]</span></p>
+<p><span class="math display">\[
+\frac{di_{L_1}}{dt} = \frac{V_g-v_{C_1}-v_o}{L_1} = \frac{V_g-V_{C_1}-V_o}{L_1} \\
+\frac{du_{C_1}}{dt} = \frac{i_{C_1}}{C_1} = \frac{i_{L_1}}{C_1} \approx \frac{I_{L_1}}{C_1} \\
+\frac{di_{L_2}}{dt} = \frac{v_{L_2}}{L_2} = \frac{-v_0}{L_2} \approx \frac{-V_{o}}{L_2} \\
+\frac{du_{C_2}}{dt} = \frac{i_{C_2}}{C_2} = \frac{i_{L_1}-\frac{v_o}{R}}{C_2} \approx \frac{I_{L_1}-\frac{V_o}{R}}{C_2}
+\]</span></p>
+<p>to set <span class="math inline">\(&lt;v_{L_1}&gt; = 0\)</span> <span class="math display">\[
+\frac{V_g}{L_1}DT_s + \frac{V_g - V_{C_1} - V_o}{L_1}D&#39;T_s = 0
+\]</span> to set <span class="math inline">\(&lt;i_{C_1}&gt; = 0\)</span> <span class="math display">\[
+\frac{-I_{L_2}}{C_1}DT_s + \frac{I_{L_1}}{C_1} D&#39;T_s = 0
+\]</span> to set $&lt;u_{L_2}&gt; = 0 $ <span class="math display">\[
+\frac{V_{C_1}}{L_2}DT_s - \frac{V_o}{L_2}D&#39;T_s = 0
+\]</span> to set <span class="math inline">\(&lt;i_{C_2}&gt; = 0\)</span> <span class="math display">\[
+-\frac{V_o}{RC_2}DT_s +\frac{I_{L_1} + I_{L_2} -\frac{V_o}{R}}{C_2}D&#39;T_s = 0
+\]</span> from <span class="math inline">\(equation (7)\)</span><br>
+<span class="math display">\[
+V_{C_1}D =  V_o D&#39;
+\]</span> from <span class="math inline">\(euqation(5)\)</span> <span class="math display">\[
+V_g D + (V_g - V_{C_1} - V_o)D&#39; = 0 \\ 
+V_g + (-\frac{V_oD&#39;}{D} - V_o)D&#39; =0 \\
+V_o = \frac{V_g D}{D&#39;}
+\]</span> from <span class="math inline">\(equation(9)\)</span> <span class="math display">\[
+V_o = \frac{V_{C_1}D}{D&#39;}
+\]</span> assiociate <span class="math inline">\(equation(9),(11)\)</span></p>
+<p>we get that <span class="math display">\[
+V_g = V_{C_1}
+\]</span> from <span class="math inline">\(equation(6)\)</span> <span class="math display">\[
+-I_{L_2}D + I_{L_1}D&#39; = 0 \\
+I_{L_2} = \frac{I_{L_1}D&#39;}{D}
+\]</span></p>
+<p>from <span class="math inline">\(euqaiton (8)\)</span> <span class="math display">\[
+-\frac{V_o}{R} +(I_{L_1}+I_{L_2})D&#39; = 0\\
+I_{L_1}+I_{L_2} = \frac{V_o}{RD&#39;} = \frac{V_gD}{RD&#39;D&#39;} \\
+I_{L_1}+\frac{I_{L_1}D&#39;}{D} = \frac{V_gD}{RD&#39;D&#39;} \\
+\frac{I_{L_1}}{D} = \frac{V_gD}{RD&#39;D&#39;} \\
+I_{L_1} = (\frac{D}{D&#39;})^2 \frac{V_g}{R}
+\]</span> from <span class="math inline">\(equation(13)\)</span> <span class="math display">\[
+I_{L_2} =\frac{D}{D&#39;} \frac{V_g}{R}
+\]</span> use <span class="math inline">\(\frac{du_{C_1}}{dt} = \frac{i_{C_1}}{C_1} = \frac{-i_{L_2}}{C_1} \approx \frac{-I_{L_2}}{C_1} \\\)</span></p>
+<p>we can get that <span class="math display">\[
+2 \Delta v_{C_1} = \frac{-I_{L_2}}{C_1}DT_s \\
+\Delta v_{C_1} = \frac{D^2}{D&#39;}T_S\frac{V_g}{2RC_1}
+\]</span> use <span class="math inline">\(\frac{du_{C_2}}{dt} = \frac{i_{C_2}}{C_2} = -\frac{v_o}{RC_2} \approx -\frac{V_o}{RC_2} \\\)</span> <span class="math display">\[
+2\Delta v_o = \frac{V_o}{RC_2}DT_s \\
+\Delta v_o = \frac{D^2}{D&#39;}T_s\frac{V_g}{2RC_2}
+\]</span> use $ =  =  $ <span class="math display">\[
+2\Delta i_{L_1} = \frac{V_g}{L_1}DT_s \\
+\Delta i_{L_1} = \frac{V_g}{2L_1}DT_s \\
+\]</span> use <span class="math inline">\(\frac{di_{L_2}}{dt} = \frac{v_{L_2}}{L_2} = \frac{-v_0}{L_2} \approx \frac{-V_{o}}{L_2} \\\)</span> <span class="math display">\[
+2\Delta i_{L_2} = \frac{V_o}{L_2}D&#39;T_s \\
+\Delta i_{L_2} = \frac{V_gD}{2L_2}T_s \\
+\]</span></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/13/power-electric/Buck-Converter/">
+                <span class="level-item">Buck Converter</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class=is-rounded src="/images/jojo2.png" alt="Cat and Dog">
+                    </figure>
+                    
+                    <p class="is-size-4 is-block">
+                        Cat and Dog
+                    </p>
+                    
+                    
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        7
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        3
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        0
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/chen-gz" target="_blank">
+                Follow</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Github" href="https://github.com/chen-gz">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/linear-control-system/">
+            <span class="level-start">
+                <span class="level-item">linear-control-system</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/linear-control-system/First/">
+            <span class="level-start">
+                <span class="level-item">First</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/power-electric/">
+            <span class="level-start">
+                <span class="level-item">power electric</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-14T14:20:03.617Z">2019-09-14</time></div>
+                    <a href="/2019/09/14/power-electric/SEPIC-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/power-electric/Buck-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Buck Converter</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/power-electric/Foundation-And-Basic-Concept/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Foundation and Basic Concept</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/power-electric/tmp/" class="title has-link-black-ter is-size-6 has-text-weight-normal">temporator things for power electric</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:13:39.974Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/Probability-and-Random-Processes/a1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Probablity and Random Processes</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">September 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">7</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-14T14:20:03.617Z">2019-09-14</time></div>
+                    <a href="/2019/09/14/power-electric/SEPIC-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/power-electric/Buck-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Buck Converter</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/power-electric/Foundation-And-Basic-Concept/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Foundation and Basic Concept</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/power-electric/tmp/" class="title has-link-black-ter is-size-6 has-text-weight-normal">temporator things for power electric</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:13:39.974Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/Probability-and-Random-Processes/a1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Probablity and Random Processes</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">September 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">7</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/jojo.svg" alt="" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 Lucas&nbsp;
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: true
+        },
+        SVG: {
+            matchFontHeight: true
+        },
+        CommonHTML: {
+            matchFontHeight: true
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        },
+		TeX: {
+		equationNumbers:{
+			autoNumber: "AMS" 
+		}
+    });
+});
+</script>
+
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+</body>
+</html>

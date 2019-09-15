@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 3.9.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>Buck Converter - Dog and Cat</title>
+
+
+    <meta name="description" content="Buck Converter equations \[ v_L = v_g - V \approx V_g -V \] \[ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R} \] \[ \frac{dv_c}{dt} = \frac{i_c}{C} \approx \frac{I-\frac{V}{R}}{C} \] \[ \">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Buck Converter">
+<meta property="og:url" content="https://chen-gz.github.io/2019/09/13/power-electric/Buck-Converter/index.html">
+<meta property="og:site_name" content="Dog and Cat">
+<meta property="og:description" content="Buck Converter equations \[ v_L = v_g - V \approx V_g -V \] \[ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R} \] \[ \frac{dv_c}{dt} = \frac{i_c}{C} \approx \frac{I-\frac{V}{R}}{C} \] \[ \">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://chen-gz.github.io/images/og_image.png">
+<meta property="og:updated_time" content="2019-09-13T23:37:03.477Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Buck Converter">
+<meta name="twitter:description" content="Buck Converter equations \[ v_L = v_g - V \approx V_g -V \] \[ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R} \] \[ \frac{dv_c}{dt} = \frac{i_c}{C} \approx \frac{I-\frac{V}{R}}{C} \] \[ \">
+<meta name="twitter:image" content="https://chen-gz.github.io/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/jojo.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+<body class="is-3-column">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/jojo.svg" alt="Buck Converter" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 minutes read (About 578 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Buck Converter
+            
+        </h1>
+        <div class="content">
+            <h1 id="buck-converter">Buck Converter</h1>
+<h2 id="equations">equations</h2>
+<p><span class="math display">\[
+v_L = v_g - V \approx V_g -V
+\]</span></p>
+<p><span class="math display">\[
+i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R}
+\]</span></p>
+<p><span class="math display">\[
+\frac{dv_c}{dt} = \frac{i_c}{C} \approx \frac{I-\frac{V}{R}}{C}
+\]</span></p>
+<p><span class="math display">\[
+\frac{di_l}{dt} = \frac{v_L}{L} \approx \frac{V_g-V}{L}
+\]</span></p>
+<a id="more"></a>
+<h2 id="circuit">circuit</h2>
+<figure>
+<img src="https://cdn.mathpix.com/snip/images/_M6gGUAHbPliyaCoPxV6vYsQCDwB-7SaTn7ctheyrTE.original.fullsize.png" alt><figcaption>buck converter</figcaption>
+</figure>
+<p><img src="https://cdn.mathpix.com/snip/images/6ncIPCZr4oVCyAsn524icBYMQFKuZ3js368UPkgJEx4.original.fullsize.png"></p>
+<h2 id="relationship-of-input-and-output-voltage">relationship of input and output voltage</h2>
+<p>The relationship between input voltage <span class="math inline">\(V_g\)</span> and output voltage $ V_s$: <span class="math display">\[
+V_{s}=\frac{1}{T_{s}} \int_{0}^{T_{s}} v_{s}(t) d t=D V_{g}
+\]</span> <img src="https://cdn.mathpix.com/snip/images/6wZ77ncJ5ZgeRNXhQdlLnaOiIjSViMAlBRUxGmh9P1E.original.fullsize.png"></p>
+<h2 id="dc-component-of-v_st">DC component of <span class="math inline">\(v_s(t)\)</span></h2>
+<p>As illustrated in Fig. <span class="math inline">\(2.2 .\)</span> the integral is given by the area under the curve, or <span class="math inline">\(D T_{s} V_{g}\)</span> . The average value is therefore <span class="math display">\[
+\left\langle v_{s}\right\rangle=\frac{1}{T_{s}}\left(D T_{s} V_{g}\right)=D V_{g}
+\]</span> So the average value, or DC component, of <span class="math inline">\(v_{s}(t)\)</span> is equal to the duty cycle times the DC input voltage <span class="math inline">\(V_{g}\)</span>.</p>
+<h2 id="the-ripple-of-inductor-current">the ripple of inductor current</h2>
+<p>The inductor voltage <span class="math inline">\(v_{L}(t)\)</span> is then given by <span class="math display">\[
+v_{L}=V_{x}-v(t)
+\]</span> The inductor voltage can be found by use of the definition <span class="math display">\[
+v_{L}(t)=L \frac{d i_{L}(t)}{d t}
+\]</span> <img src="https://cdn.mathpix.com/snip/images/bT4Tzk761_LDrkRgsfosMKTpqlKTMGXyLUZT0Sjrh54.original.fullsize.png"> <img src="https://cdn.mathpix.com/snip/images/LSS4uMGqIjjKZyB3UnhCjcWhyCErx4x-f8hgGjqnNE8.original.fullsize.png"> Thus, during the first interval, when <span class="math inline">\(v_{L}(t)\)</span> is approximately <span class="math inline">\(\left(V_{x}-V\right),\)</span> the slope of the inductor current waveform is <span class="math display">\[
+\frac{d i_{L}(t)}{d t}=\frac{v_{L}(t)}{L} \approx \frac{v_{g}-v}{L}
+\]</span></p>
+<p><span class="math display">\[
+\frac{d i_{L}(t)}{d t} \approx-\frac{V}{L}
+\]</span></p>
+<p><img src="https://cdn.mathpix.com/snip/images/n_IxNkgfwePVTMnEdEOXx4y5g6MBJFjpzQCju7CXo_M.original.fullsize.png"></p>
+<h2 id="the-inductor-current-ripple-delta-i_l">the inductor current ripple <span class="math inline">\(\Delta i_{L}\)</span></h2>
+<p>since we know the slope of the inductor curring the first subinterval, and we also know the length of the first subinterval, we can calculate the ripple magnitude. The <span class="math inline">\(i_{t}(t)\)</span> waveform is symmetrical about <span class="math inline">\(I,\)</span> and hence during the first so the change in current increases by 2<span class="math inline">\(\Delta i_{L}\)</span> (since <span class="math inline">\(\Delta i_{1}\)</span> is the peak ripple, the peak-to-peak ripple is <span class="math inline">\(2\Delta i_{l}\)</span>). So the change in current, <span class="math inline">\(2 \Delta i_{L},\)</span> is equal to the slope (the applied inductor voltage divided by <span class="math inline">\(L\)</span> ) times the length of the first subinterval <span class="math inline">\(\left(D T_{s}\right)\)</span> : <span class="math display">\[
+\left(2 \Delta i_{L}\right)=\left(\frac{V_{g}-V}{L}\right)\left(D T_{\mathrm{s}}\right)
+\]</span></p>
+<p><span class="math display">\[
+\Delta i_{L}=\frac{V_{g}-V}{2 L} D T_{\mathrm{s}}
+\]</span></p>
+<h2 id="the-capacitor-voltage-ripple-delta-v_c">the Capacitor voltage ripple <span class="math inline">\(\Delta v_{C}\)</span></h2>
+<h3 id="why-can-not-use-fracdv_cdt-to-calcutlate">why can not use <span class="math inline">\(\frac{dv_c}{dt}\)</span> to calcutlate</h3>
+<h3 id="why-need-use-delta-i_l-to-calculate">why need use <span class="math inline">\(\Delta i_L\)</span> to calculate</h3>
+<h2 id="reduce-peak-to-peak-ripple">reduce peak to peak ripple</h2>
+<p>The inductor value can be chosen such that a desired current ripple <span class="math inline">\(\Delta i_{L}\)</span> is attained. Solution of <span class="math inline">\(Eq. (2.15)\)</span> for the inductance <span class="math inline">\(L\)</span> yields <span class="math display">\[
+L=\frac{V_{k}-V}{2 \Delta i_{L}} D T_{\mathrm{s}}
+\]</span> <img src="https://cdn.mathpix.com/snip/images/1g0OPaNI3J_GFCqS2icfdgWoVawPDMRUhk7fNLv_Abk.original.fullsize.png"></p>
+<h2 id="fit-continue-conduction-mode-get-l_min">fit continue conduction mode get <span class="math inline">\(L_{min}\)</span></h2>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/14/power-electric/SEPIC-Converter/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item"></span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/13/power-electric/Foundation-And-Basic-Concept/">
+                <span class="level-item">Foundation and Basic Concept</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class=is-rounded src="/images/jojo2.png" alt="Cat and Dog">
+                    </figure>
+                    
+                    <p class="is-size-4 is-block">
+                        Cat and Dog
+                    </p>
+                    
+                    
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        7
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        3
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        0
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/chen-gz" target="_blank">
+                Follow</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Github" href="https://github.com/chen-gz">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#buck-converter">
+        <span class="has-mr-6">1</span>
+        <span>Buck Converter</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#equations">
+        <span class="has-mr-6">1.1</span>
+        <span>equations</span>
+        </a></li><li>
+        <a class="is-flex" href="#circuit">
+        <span class="has-mr-6">1.2</span>
+        <span>circuit</span>
+        </a></li><li>
+        <a class="is-flex" href="#relationship-of-input-and-output-voltage">
+        <span class="has-mr-6">1.3</span>
+        <span>relationship of input and output voltage</span>
+        </a></li><li>
+        <a class="is-flex" href="#dc-component-of-v_st">
+        <span class="has-mr-6">1.4</span>
+        <span>DC component of \(v_s(t)\)</span>
+        </a></li><li>
+        <a class="is-flex" href="#the-ripple-of-inductor-current">
+        <span class="has-mr-6">1.5</span>
+        <span>the ripple of inductor current</span>
+        </a></li><li>
+        <a class="is-flex" href="#the-inductor-current-ripple-delta-i_l">
+        <span class="has-mr-6">1.6</span>
+        <span>the inductor current ripple \(\Delta i_{L}\)</span>
+        </a></li><li>
+        <a class="is-flex" href="#the-capacitor-voltage-ripple-delta-v_c">
+        <span class="has-mr-6">1.7</span>
+        <span>the Capacitor voltage ripple \(\Delta v_{C}\)</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#why-can-not-use-fracdv_cdt-to-calcutlate">
+        <span class="has-mr-6">1.7.1</span>
+        <span>why can not use \(\frac{dv_c}{dt}\) to calcutlate</span>
+        </a></li><li>
+        <a class="is-flex" href="#why-need-use-delta-i_l-to-calculate">
+        <span class="has-mr-6">1.7.2</span>
+        <span>why need use \(\Delta i_L\) to calculate</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#reduce-peak-to-peak-ripple">
+        <span class="has-mr-6">1.8</span>
+        <span>reduce peak to peak ripple</span>
+        </a></li><li>
+        <a class="is-flex" href="#fit-continue-conduction-mode-get-l_min">
+        <span class="has-mr-6">1.9</span>
+        <span>fit continue conduction mode get \(L_{min}\)</span>
+        </a></li></ul></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/linear-control-system/">
+            <span class="level-start">
+                <span class="level-item">linear-control-system</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/linear-control-system/First/">
+            <span class="level-start">
+                <span class="level-item">First</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/power-electric/">
+            <span class="level-start">
+                <span class="level-item">power electric</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-14T14:20:03.617Z">2019-09-14</time></div>
+                    <a href="/2019/09/14/power-electric/SEPIC-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/power-electric/Buck-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Buck Converter</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/power-electric/Foundation-And-Basic-Concept/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Foundation and Basic Concept</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/power-electric/tmp/" class="title has-link-black-ter is-size-6 has-text-weight-normal">temporator things for power electric</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:13:39.974Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/Probability-and-Random-Processes/a1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Probablity and Random Processes</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">September 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">7</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-14T14:20:03.617Z">2019-09-14</time></div>
+                    <a href="/2019/09/14/power-electric/SEPIC-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/power-electric/Buck-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Buck Converter</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/power-electric/Foundation-And-Basic-Concept/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Foundation and Basic Concept</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/power-electric/tmp/" class="title has-link-black-ter is-size-6 has-text-weight-normal">temporator things for power electric</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:13:39.974Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/Probability-and-Random-Processes/a1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Probablity and Random Processes</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">September 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">7</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/jojo.svg" alt="Buck Converter" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 Lucas&nbsp;
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: true
+        },
+        SVG: {
+            matchFontHeight: true
+        },
+        CommonHTML: {
+            matchFontHeight: true
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        },
+		TeX: {
+		equationNumbers:{
+			autoNumber: "AMS" 
+		}
+    });
+});
+</script>
+
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+</body>
+</html>
