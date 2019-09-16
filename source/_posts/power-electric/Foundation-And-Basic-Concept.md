@@ -101,3 +101,9 @@ The average value, or DC component, of the capacitor current must be zero in equ
 current must over zero, if not satisfied continue conduction mode, then when switch to  status 2, two component will off!
 
 from continue conduction mode we can define $L_{min}$ to satisfy continue conduction mode.
+
+
+
+## M(D) of various converter
+
+![](https://cdn.mathpix.com/snip/images/eTfq0ninHSJSxUEnWNIkg5oEzPDzXGm8Kqjpk1MTh78.original.fullsize.png)
