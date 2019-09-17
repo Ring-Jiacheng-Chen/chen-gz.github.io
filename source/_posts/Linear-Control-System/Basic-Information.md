@@ -1,12 +1,12 @@
 ---
-title: linear control system 
+title: Basic Information
 categories: 
 - linear-control-system
 - First
 toc: true
 ---
 
-## everything is copied from book
+## Basic Information
 
 The systems to be studied in this text are limited to linear systems. Using the concept of linearity, we develop in Chapter 2 that every linear system can be described by
 $$
@@ -28,7 +28,7 @@ $$
 and 
 $$
 \begin{array}{c}
-{\dot{\mathbf{x}}(t)=\mathbf{A} \mathbf{x}(t)+\mathbf{B u}(t)} \\\ {\mathbf{y}(t)=\mathbf{C x}(t)+\mathbf{D} \mathbf{u}(t)}\end{array}
+{\dot{\mathbf{x}}(t)=\mathbf{A} \mathbf{x}(t)+\mathbf{B u}(t)} \\ {\mathbf{y}(t)=\mathbf{C x}(t)+\mathbf{D} \mathbf{u}(t)}\end{array}
 $$
 For this class of linear time-invariant systems, the Laplace transform is an important tool in analysis and design. Applying the Laplace transform to (1.4) yields
 $$
@@ -92,20 +92,22 @@ A system is called a linear system if for every t_0 and any two state-input–ou
 
 $$
 \left.
-\begin{array}{l}{\mathbf{x}\left(t_{0}\right)} \\\ {\mathbf{u}(t), t \geq t_{0}}\end{array}\right\} \rightarrow \mathbf{y}(t), \quad t \geq t_{0}
+\begin{array}{l}{\mathbf{x}\left(t_{0}\right)} \\ {\mathbf{u}(t), t \geq t_{0}}\end{array}\right\} \rightarrow \mathbf{y}(t), \quad t \geq t_{0}
 $$
 for $i =1,2$, we have
 $$
 \left.
-\begin{array}{rl}{\mathbf{x}_{1}\left(t_{0}\right)+\mathbf{x}_{2}\left(t_{0}\right)} & {} \\\ {\mathbf{u}_{1}(t)+\mathbf{u}_{2}(t),} & {t \geq t_{0}}\end{array}\right\}  \rightarrow \mathbf{y}_{1}(t)+\mathbf{y}_{2}(t), \quad t \geq t_{0} \text { (additivity) }
+\begin{array}{rl}{\mathbf{x}_{1}\left(t_{0}\right)+\mathbf{x}_{2}\left(t_{0}\right)} & {} \\ {\mathbf{u}_{1}(t)+\mathbf{u}_{2}(t),} & {t \geq t_{0}}\end{array}\right\}  \rightarrow \mathbf{y}_{1}(t)+\mathbf{y}_{2}(t), \quad t \geq t_{0} \text { (additivity) }
 $$
 and 
 $$
-\begin{array}{l}{\alpha \mathbf{x}_{1}\left(t_{0}\right)} \\ {\alpha \mathbf{u}_{1}(t), \quad t \geq t_{0}}\end{array}\rightarrow \alpha \mathbf{y}_{1}(t), \quad t \geq t_{0} \text { (homogeneity) }
+\left.
+\begin{array}{l}{\alpha \mathbf{x}_{1}\left(t_{0}\right)} \\ {\alpha \mathbf{u}_{1}(t), \quad t \geq t_{0}}\end{array} \right\} \rightarrow \alpha \mathbf{y}_{1}(t), \quad t \geq t_{0} \text { (homogeneity) }
 $$
 for any real constant $\alpha$. The ﬁrst property is called the additivity property, the second, the homogeneity property. These two properties can be combined as
 $$
-\begin{array}{l}{\alpha_{1} \mathbf{x}_{1}\left(t_{0}\right)+\alpha_{2} \mathbf{x}_{2}\left(t_{0}\right)} \\\ {\alpha_{1} \mathbf{u}_{1}(t)+\alpha_{2} \mathbf{u}_{2}(t), \quad t \geq t_{0}}\end{array} \rightarrow \alpha_{1} \mathbf{y}_{1}(t)+\alpha_{2} \mathbf{y}_{2}(t), \quad t \geq t_{0}
+\left.
+\begin{array}{l}{\alpha_{1} \mathbf{x}_{1}\left(t_{0}\right)+\alpha_{2} \mathbf{x}_{2}\left(t_{0}\right)} \\ {\alpha_{1} \mathbf{u}_{1}(t)+\alpha_{2} \mathbf{u}_{2}(t), \quad t \geq t_{0}}\end{array} \right \} \rightarrow \alpha_{1} \mathbf{y}_{1}(t)+\alpha_{2} \mathbf{y}_{2}(t), \quad t \geq t_{0}
 $$
 for any real constants $\alpha_1$ and $\alpha_2$, and is called the superposition property. A system is called a nonlinear system if the superposition property does not hold.
 
@@ -114,55 +116,57 @@ for any real constants $\alpha_1$ and $\alpha_2$, and is called the superpositio
 If the input $\mathbf{u}(t)$ is identically zero for $t \geq t_{0}$ , then the output will be excited exclusively by the initial state $\mathbf{x}\left(t_{0}\right).$ This output is called the zero-input response and will be denoted by$\mathbf{y}_{z i}$ or
 
 $$
-\begin{array}{l}{\mathbf{x}\left(t_{0}\right)} \\\ {\mathbf{u}(t) \equiv \mathbf{0}, t \geq t_{0}}\end{array}\rightarrow \mathbf{y}_{z i}(t), \quad t \geq t_{0}
+\left.
+\begin{array}{l}{\mathbf{x}\left(t_{0}\right)} \\ {\mathbf{u}(t) \equiv \mathbf{0}, t \geq t_{0}}\end{array}\right \}\rightarrow \mathbf{y}_{z i}(t), \quad t \geq t_{0}
 $$
 *zero state response*
 
 If the initial state $\mathbf{x}\left(t_{0}\right)$ is zero, then the output will be excited exclusively by the input. This output is called the zero-state response and will be denoted by $\mathbf{y}_{z s}$ or
-\begin{equation}
-\begin{array}{rl}{\mathbf{x}\left(t_{0}\right)=} & {\mathbf{0}} \\\ {\mathbf{u}(t),} & {t \geq t_{0}}\end{array}\rightarrow \mathbf{y}_{z s}(t), \quad t \geq t_{0}
-\end{equation}
+$$
+\left.
+\begin{array}{rl}{\mathbf{x}\left(t_{0}\right)=}  {\mathbf{0}} \\ {\mathbf{u}(t),} 4 {t \geq t_{0}}\end{array}\right\} \rightarrow \mathbf{y}_{z s}(t), \quad t \geq t_{0}
+$$
 
 ## input-output description
 Consequently, the input u(t) can be expressed symbolically as
-\begin{equation}
+$$
 u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \Delta
-\end{equation}
+$$
 
 Let $g_{\Delta}\left(t, t_{i}\right)$ be the output at time $t$ excited by the pulse $u(t)=\delta_{\Delta}\left(t-t_{i}\right)$ applied at time $t_{i}$. Then we have
 
-\begin{equation}
-\begin{aligned} \delta_{\Delta}\left(t-t_{i}\right) & \rightarrow g_{\Delta}\left(t, t_{i}\right) \\\
-\delta_{\Delta}\left(t-t_{i}\right) u\left(t_{i}\right) \Delta & \rightarrow g_{\Delta}\left(t, t_{i}\right) u\left(t_{i}\right) \Delta \quad \text { (homogeneity) } \\\
+$$
+\begin{aligned} \delta_{\Delta}\left(t-t_{i}\right) & \rightarrow g_{\Delta}\left(t, t_{i}\right) \\
+\delta_{\Delta}\left(t-t_{i}\right) u\left(t_{i}\right) \Delta & \rightarrow g_{\Delta}\left(t, t_{i}\right) u\left(t_{i}\right) \Delta \quad \text { (homogeneity) } \\
 \sum_{i} \delta_{\Delta}\left(t-t_{i}\right) u\left(t_{i}\right) \Delta & \rightarrow \sum_{i} g_{\Delta}\left(t, t_{i}\right) u\left(t_{i}\right) \Delta \quad \text { (additivity) } \end{aligned}
-\end{equation}
+$$
 Thus the output $y(t)$ excited by the input $u(t)$ can be approximated by
-\begin{equation}
+$$
 y(t) \approx \sum_{i} g_{\Delta}\left(t, t_{i}\right) u\left(t_{i}\right) \Delta
-\end{equation}
+$$
 
 Now if $\Delta$ approaches zero, the pulse $\delta_{\Delta}\left(t-t_{i}\right)$ becomes an impulse at $t_{i},$ denoted by $\delta\left(t-t_{i}\right),$ and the corresponding output will be denoted by $g\left(t, t_{i}\right) .$ As $\Delta$ approaches zero, the approximation in $(2.2)$ becomes an equality, the summation becomes an integration, the discrete $t_{i}$ becomes a continuum and can be replaced by $\tau,$ and $\Delta$ can be written as $d \tau .$ Thus $(2.2)$ becomes
 
-\begin{equation}
+$$
 y(t)=\int_{-\infty}^{\infty} g(t, \tau) u(\tau) d \tau
-\end{equation}
+$$
 Note that $g(t, \tau)$ is a function of two variables. The second variable denotes the time at which the impulse input is applied; the ﬁrst variable denotes the time at which the output is observed. Because $g(t,\tau)$ is the response excited by an impulse, it is called the impulse response. If a system is causal, the output will not appear before an input is applied. Thus we have
-\begin{equation}
+$$
 \text { Causal } \Longleftrightarrow g(t, \tau)=0 \text { for } t<\tau
-\end{equation}
+$$
 
 *relax* 
 
 A system is said to be relaxed at $t_0$ if its initial state at $t_0$ is 0. In this case, the output $y(t)$, for $t ≥ t_0$ , is excited exclusively by the input $u(t)$ for $t \geq 0$.
 
 In conclusion, every linear system that is causal and relaxed at $t_0$ can be described by
-\begin{equation}
+$$
 \mathbf{G}(t, \tau)=\left[\begin{array}{cccc}{g_{11}(t, \tau)} & {g_{12}(t, \tau)} & {\cdots} & {g_{1 p}(t, \tau)} \\\ {g_{21}(t, \tau)} & {g_{22}(t, \tau)} & {\cdots} & {g_{2 p}(t, \tau)} \\\ {\vdots} & {\vdots} & {} & {\vdots} \\\ {g_{q 1}(t, \tau)} & {g_{q 2}(t, \tau)} & {\cdots} & {g_{q p}(t, \tau)}\end{array}\right]
-\end{equation}
+$$
 where 
-\begin{equation}
+$$
 \mathbf{y}(t)=\int_{t_{0}}^{t} \mathbf{G}(t, \tau) \mathbf{u}(\tau) d \tau
-\end{equation}
+$$
 and $g_{ij}(t,\tau)$ is the response at time $t$ at the $i$th output terminal due to an impulse applied at time $\tau$ at the $j$ th input terminal, the inputs at other terminals being identically zero. 
 
 That is, $g_i{ij}(t, \tau )$ is the impulse response between the $j$ th input terminal and the ith output terminal. Thus G is called the *impulse response matrix* of the system. 
@@ -173,13 +177,15 @@ That is, $g_i{ij}(t, \tau )$ is the impulse response between the $j$ th input te
 
 A system is said to be time invariant if for every state-input–output pair
 
-\begin{equation}
-\begin{array}{l}{\mathbf{x}\left(t_{0}\right)} \\\ {\mathbf{u}(t), t \geq t_{0}}\end{array} \rightarrow \mathbf{y}(t), \quad t \geq t_{0}
-\end{equation}
+$$
+\left.
+\begin{array}{l}{\mathbf{x}\left(t_{0}\right)} \\\ {\mathbf{u}(t), t \geq t_{0}}\end{array}\right\} \rightarrow \mathbf{y}(t), \quad t \geq t_{0}
+$$
 and any $T$, we have
-\begin{equation}
-\begin{array}{l}{\mathbf{x}\left(t_{0}+T\right)} \\\ {\mathbf{u}(t-T), t \geq t_{0}+T}\end{array} \rightarrow \mathbf{y}(t-T), t \geq t_{0}+T \quad \text { (time shifting) }
-\end{equation}
+$$
+\left.
+\begin{array}{l}{\mathbf{x}\left(t_{0}+T\right)} \\ {\mathbf{u}(t-T), t \geq t_{0}+T}\end{array}\right\} \rightarrow \mathbf{y}(t-T), t \geq t_{0}+T \quad \text { (time shifting) }
+$$
 
 It means that if the initial state is shifted to time $t_0 + T$ and the same input waveform is applied from $t_0 + T$ instead of from $t_0$ , then the output waveform will be the same except that it starts to appear from time $t_0 + T$ . In other words, if the initial state and the input are the same, no
 matter at what time they are applied, the output waveform will always be the same. Therefore, for time-invariant systems, we can always assume, without loss of generality, that $t_0 = 0$. If a system is not time invariant, it is said to be *time varying*.

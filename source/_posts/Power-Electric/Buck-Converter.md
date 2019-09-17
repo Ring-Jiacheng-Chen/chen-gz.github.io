@@ -96,6 +96,23 @@ $$
 
 ### why need use $\Delta i_L$ to calculate
 
+### the value of $\Delta v_C$
+
+By the capacitor relation $Q=C V$
+$$
+q=C(2 \Delta v)
+$$
+
+$$
+q=\frac{1}{2} \Delta i_{L} \frac{T_{s}}{2}
+$$
+
+$$
+\Delta v=\frac{\Delta i_{L} T_{s}}{8 C}
+$$
+
+
+
 
 
 ## reduce peak to peak ripple
@@ -107,3 +124,7 @@ $$
 ![](https://cdn.mathpix.com/snip/images/1g0OPaNI3J_GFCqS2icfdgWoVawPDMRUhk7fNLv_Abk.original.fullsize.png)
 
 ## fit continue conduction mode get $L_{min}$
+
+$$
+L=\frac{V_{g}-V}{2 \Delta i_{l}} D T_{\mathrm{s}}
+$$
