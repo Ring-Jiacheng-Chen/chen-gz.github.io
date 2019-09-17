@@ -14,9 +14,7 @@ Another converter, the buck-boost converter, can either increase or decrease the
 
 ### circuit
 
-
-
-![1568423055441](/home/lucas/.config/Typora/typora-user-images/1568423055441.png)
+![Buck-Boost-Converter](./Buck-Boost-Converter/Buck-Boost-Converter.png)
 
 ## why this is a buck-boost converter
 
