@@ -135,11 +135,15 @@
             <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-09-14T14:20:03.617Z">2019-09-14</time>
                 
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
+                </div>
+                
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 minutes read (About 619 words)
+                    4 minutes read (About 612 words)
                 </span>
                 
                 
@@ -148,89 +152,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/09/14/power-electric/SEPIC-Converter/"></a>
+                <a class="has-link-black-ter" href="/2019/09/14/Power-Electric/SEPIC-Converter/">SEPIC-Converter</a>
             
         </h1>
         <div class="content">
-            <p>title: SEPIC-Converter category: power electric toc: true</p>
-<h2 id="sepic-converter">SEPIC-Converter</h2>
+            <h2 id="sepic-converter">SEPIC-Converter</h2>
 <p>Single-ended primary-inductor converter</p>
-<p>Principle</p>
-<p>when mos on, the circuit work at status 1</p>
-<p>from the firgure we can see that we have 3 circle. <span class="math display">\[
-v_{L1} = V_g \\
-i_{C1} = -i_{L2} \approx -I_{L2} \\
-v_{L2} = v_{C1} \approx V_{C1} \\
-i_{C2} = -\frac{v_o}{R} \approx -\frac{V_o}{R}
-\]</span></p>
-<p><span class="math display">\[
-\frac{di_{L_1}}{dt} = \frac{v_{L1}}{L_1} = \frac{V_g}{L_1} \\
-\frac{du_{C_1}}{dt} = \frac{i_{C_1}}{C_1} = \frac{-i_{L_2}}{C_1} \approx \frac{-I_{L_2}}{C_1} \\
-\frac{di_{L_2}}{dt} = \frac{v_{L_2}}{L_2} = \frac{v_{C_1}}{L_2} \approx \frac{V_{C_1}}{L_2} \\
-\frac{du_{C_2}}{dt} = \frac{i_{C_2}}{C_2} = -\frac{v_o}{RC_2} \approx -\frac{V_o}{RC_2} \\
-\]</span></p>
-<p>when mos off, the circuit work at status 2</p>
-<p>from the figure we have equations: <span class="math display">\[
-v_{L1} = V_g - v_{C_1} - v_o \approx V_g - V_{C_1} - V_o\\
-i_{C1} = i_{L_1} \approx I_{L_1} \\
-v_{L2} = -v_o \approx -V_o \\
-i_{C2} = i_{L_1} + i_{L_2} - \frac{v_o}{R} \approx I_{L_1} + I_{L_2} - \frac{V_o}{R}
-\]</span></p>
-<p><span class="math display">\[
-\frac{di_{L_1}}{dt} = \frac{V_g-v_{C_1}-v_o}{L_1} = \frac{V_g-V_{C_1}-V_o}{L_1} \\
-\frac{du_{C_1}}{dt} = \frac{i_{C_1}}{C_1} = \frac{i_{L_1}}{C_1} \approx \frac{I_{L_1}}{C_1} \\
-\frac{di_{L_2}}{dt} = \frac{v_{L_2}}{L_2} = \frac{-v_0}{L_2} \approx \frac{-V_{o}}{L_2} \\
-\frac{du_{C_2}}{dt} = \frac{i_{C_2}}{C_2} = \frac{i_{L_1}-\frac{v_o}{R}}{C_2} \approx \frac{I_{L_1}-\frac{V_o}{R}}{C_2}
-\]</span></p>
-<p>to set <span class="math inline">\(&lt;v_{L_1}&gt; = 0\)</span> <span class="math display">\[
-\frac{V_g}{L_1}DT_s + \frac{V_g - V_{C_1} - V_o}{L_1}D&#39;T_s = 0
-\]</span> to set <span class="math inline">\(&lt;i_{C_1}&gt; = 0\)</span> <span class="math display">\[
-\frac{-I_{L_2}}{C_1}DT_s + \frac{I_{L_1}}{C_1} D&#39;T_s = 0
-\]</span> to set $&lt;u_{L_2}&gt; = 0 $ <span class="math display">\[
-\frac{V_{C_1}}{L_2}DT_s - \frac{V_o}{L_2}D&#39;T_s = 0
-\]</span> to set <span class="math inline">\(&lt;i_{C_2}&gt; = 0\)</span> <span class="math display">\[
--\frac{V_o}{RC_2}DT_s +\frac{I_{L_1} + I_{L_2} -\frac{V_o}{R}}{C_2}D&#39;T_s = 0
-\]</span> from <span class="math inline">\(equation (7)\)</span><br>
-<span class="math display">\[
-V_{C_1}D =  V_o D&#39;
-\]</span> from <span class="math inline">\(euqation(5)\)</span> <span class="math display">\[
-V_g D + (V_g - V_{C_1} - V_o)D&#39; = 0 \\ 
-V_g + (-\frac{V_oD&#39;}{D} - V_o)D&#39; =0 \\
-V_o = \frac{V_g D}{D&#39;}
-\]</span> from <span class="math inline">\(equation(9)\)</span> <span class="math display">\[
-V_o = \frac{V_{C_1}D}{D&#39;}
-\]</span> assiociate <span class="math inline">\(equation(9),(11)\)</span></p>
-<p>we get that <span class="math display">\[
-V_g = V_{C_1}
-\]</span> from <span class="math inline">\(equation(6)\)</span> <span class="math display">\[
--I_{L_2}D + I_{L_1}D&#39; = 0 \\
-I_{L_2} = \frac{I_{L_1}D&#39;}{D}
-\]</span></p>
-<p>from <span class="math inline">\(euqaiton (8)\)</span> <span class="math display">\[
--\frac{V_o}{R} +(I_{L_1}+I_{L_2})D&#39; = 0\\
-I_{L_1}+I_{L_2} = \frac{V_o}{RD&#39;} = \frac{V_gD}{RD&#39;D&#39;} \\
-I_{L_1}+\frac{I_{L_1}D&#39;}{D} = \frac{V_gD}{RD&#39;D&#39;} \\
-\frac{I_{L_1}}{D} = \frac{V_gD}{RD&#39;D&#39;} \\
-I_{L_1} = (\frac{D}{D&#39;})^2 \frac{V_g}{R}
-\]</span> from <span class="math inline">\(equation(13)\)</span> <span class="math display">\[
-I_{L_2} =\frac{D}{D&#39;} \frac{V_g}{R}
-\]</span> use <span class="math inline">\(\frac{du_{C_1}}{dt} = \frac{i_{C_1}}{C_1} = \frac{-i_{L_2}}{C_1} \approx \frac{-I_{L_2}}{C_1} \\\)</span></p>
-<p>we can get that <span class="math display">\[
-2 \Delta v_{C_1} = \frac{-I_{L_2}}{C_1}DT_s \\
-\Delta v_{C_1} = \frac{D^2}{D&#39;}T_S\frac{V_g}{2RC_1}
-\]</span> use <span class="math inline">\(\frac{du_{C_2}}{dt} = \frac{i_{C_2}}{C_2} = -\frac{v_o}{RC_2} \approx -\frac{V_o}{RC_2} \\\)</span> <span class="math display">\[
-2\Delta v_o = \frac{V_o}{RC_2}DT_s \\
-\Delta v_o = \frac{D^2}{D&#39;}T_s\frac{V_g}{2RC_2}
-\]</span> use $ =  =  $ <span class="math display">\[
-2\Delta i_{L_1} = \frac{V_g}{L_1}DT_s \\
-\Delta i_{L_1} = \frac{V_g}{2L_1}DT_s \\
-\]</span> use <span class="math inline">\(\frac{di_{L_2}}{dt} = \frac{v_{L_2}}{L_2} = \frac{-v_0}{L_2} \approx \frac{-V_{o}}{L_2} \\\)</span> <span class="math display">\[
-2\Delta i_{L_2} = \frac{V_o}{L_2}D&#39;T_s \\
-\Delta i_{L_2} = \frac{V_gD}{2L_2}T_s \\
-\]</span></p>
-
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/09/14/Power-Electric/SEPIC-Converter/#more">Read More</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -259,7 +196,7 @@ I_{L_2} =\frac{D}{D&#39;} \frac{V_g}{R}
                 <span class="level-item has-text-grey">
                     
                     
-                    4 minutes read (About 578 words)
+                    4 minutes read (About 624 words)
                 </span>
                 
                 
@@ -268,7 +205,7 @@ I_{L_2} =\frac{D}{D&#39;} \frac{V_g}{R}
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/09/13/power-electric/Buck-Converter/">Buck Converter</a>
+                <a class="has-link-black-ter" href="/2019/09/13/Power-Electric/Buck-Converter/">Buck Converter</a>
             
         </h1>
         <div class="content">
@@ -292,7 +229,7 @@ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R}
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/09/13/power-electric/Buck-Converter/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/2019/09/13/Power-Electric/Buck-Converter/#more">Read More</a>
                 </div>
             </div>
         </div>
@@ -333,7 +270,7 @@ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R}
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/09/13/power-electric/Foundation-And-Basic-Concept/">Foundation and Basic Concept</a>
+                <a class="has-link-black-ter" href="/2019/09/13/Power-Electric/Foundation-And-Basic-Concept/">Foundation and Basic Concept</a>
             
         </h1>
         <div class="content">
@@ -350,7 +287,7 @@ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R}
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/09/13/power-electric/Foundation-And-Basic-Concept/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/2019/09/13/Power-Electric/Foundation-And-Basic-Concept/#more">Read More</a>
                 </div>
             </div>
         </div>
@@ -433,7 +370,7 @@ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R}
                 <span class="level-item has-text-grey">
                     
                     
-                    13 minutes read (About 2014 words)
+                    13 minutes read (About 1983 words)
                 </span>
                 
                 
@@ -442,11 +379,11 @@ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R}
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/09/13/linear-control-system/1/">linear control system</a>
+                <a class="has-link-black-ter" href="/2019/09/13/Linear-Control-System/Basic-Information/">Basic Information</a>
             
         </h1>
         <div class="content">
-            <h2 id="everything-is-copied-from-book">everything is copied from book</h2>
+            <h2 id="basic-information">Basic Information</h2>
 <p>The systems to be studied in this text are limited to linear systems. Using the concept of linearity, we develop in Chapter 2 that every linear system can be described by <span class="math display">\[
 \mathbf{y}(t)=\int_{t_{0}}^{t} \mathbf{G}(t, \tau) \mathbf{u}(\tau) d \tau
 \]</span></p>
@@ -456,7 +393,7 @@ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R}
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/09/13/linear-control-system/1/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/2019/09/13/Linear-Control-System/Basic-Information/#more">Read More</a>
                 </div>
             </div>
         </div>
@@ -497,7 +434,7 @@ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R}
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/09/13/power-electric/Buck-Boost-Converter/">Buck Boost Converter</a>
+                <a class="has-link-black-ter" href="/2019/09/13/Power-Electric/Buck-Boost-Converter/">Buck Boost Converter</a>
             
         </h1>
         <div class="content">
@@ -510,7 +447,7 @@ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R}
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/09/13/power-electric/Buck-Boost-Converter/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/2019/09/13/Power-Electric/Buck-Boost-Converter/#more">Read More</a>
                 </div>
             </div>
         </div>
@@ -642,7 +579,7 @@ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R}
                 <span class="level-item">power electric</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">4</span>
             </span>
         </a></li>
             </ul>
@@ -667,20 +604,7 @@ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R}
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-14T14:20:03.617Z">2019-09-14</time></div>
-                    <a href="/2019/09/14/power-electric/SEPIC-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
-                    <a href="/2019/09/13/power-electric/Buck-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Buck Converter</a>
+                    <a href="/2019/09/14/Power-Electric/SEPIC-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">SEPIC-Converter</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
                     </p>
@@ -693,7 +617,20 @@ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R}
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
-                    <a href="/2019/09/13/power-electric/Foundation-And-Basic-Concept/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Foundation and Basic Concept</a>
+                    <a href="/2019/09/13/Power-Electric/Buck-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Buck Converter</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/Power-Electric/Foundation-And-Basic-Concept/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Foundation and Basic Concept</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
                     </p>
@@ -719,7 +656,7 @@ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R}
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:13:39.974Z">2019-09-13</time></div>
-                    <a href="/2019/09/13/linear-control-system/1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">linear control system</a>
+                    <a href="/2019/09/13/Linear-Control-System/Basic-Information/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Basic Information</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/linear-control-system/">linear-control-system</a> / <a class="has-link-grey -link" href="/categories/linear-control-system/First/">First</a>
                     </p>
@@ -791,20 +728,7 @@ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R}
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-14T14:20:03.617Z">2019-09-14</time></div>
-                    <a href="/2019/09/14/power-electric/SEPIC-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
-                    <a href="/2019/09/13/power-electric/Buck-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Buck Converter</a>
+                    <a href="/2019/09/14/Power-Electric/SEPIC-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">SEPIC-Converter</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
                     </p>
@@ -817,7 +741,20 @@ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R}
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
-                    <a href="/2019/09/13/power-electric/Foundation-And-Basic-Concept/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Foundation and Basic Concept</a>
+                    <a href="/2019/09/13/Power-Electric/Buck-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Buck Converter</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/Power-Electric/Foundation-And-Basic-Concept/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Foundation and Basic Concept</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
                     </p>
@@ -843,7 +780,7 @@ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R}
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:13:39.974Z">2019-09-13</time></div>
-                    <a href="/2019/09/13/linear-control-system/1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">linear control system</a>
+                    <a href="/2019/09/13/Linear-Control-System/Basic-Information/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Basic Information</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/linear-control-system/">linear-control-system</a> / <a class="has-link-grey -link" href="/categories/linear-control-system/First/">First</a>
                     </p>

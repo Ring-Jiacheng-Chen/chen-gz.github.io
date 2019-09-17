@@ -7,21 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Buck Boost Converter - Dog and Cat</title>
+<title>Buck Converter - Dog and Cat</title>
 
 
-    <meta name="description" content="Buck Boost Converter buck-boost converter revert output voltage Another converter, the buck-boost converter, can either increase or decrease the magnitude of the voltage, but the polarity is inverted.">
+    <meta name="description" content="Buck Converter equations \[ v_L = v_g - V \approx V_g -V \] \[ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R} \] \[ \frac{dv_c}{dt} = \frac{i_c}{C} \approx \frac{I-\frac{V}{R}}{C} \] \[ \">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Buck Boost Converter">
-<meta property="og:url" content="https://chen-gz.github.io/2019/09/13/power-electric/Buck-Boost-Converter/index.html">
+<meta property="og:title" content="Buck Converter">
+<meta property="og:url" content="https://chen-gz.github.io/2019/09/13/Power-Electric/Buck-Converter/index.html">
 <meta property="og:site_name" content="Dog and Cat">
-<meta property="og:description" content="Buck Boost Converter buck-boost converter revert output voltage Another converter, the buck-boost converter, can either increase or decrease the magnitude of the voltage, but the polarity is inverted.">
+<meta property="og:description" content="Buck Converter equations \[ v_L = v_g - V \approx V_g -V \] \[ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R} \] \[ \frac{dv_c}{dt} = \frac{i_c}{C} \approx \frac{I-\frac{V}{R}}{C} \] \[ \">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://chen-gz.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-09-15T16:10:03.294Z">
+<meta property="og:updated_time" content="2019-09-17T00:23:58.353Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Buck Boost Converter">
-<meta name="twitter:description" content="Buck Boost Converter buck-boost converter revert output voltage Another converter, the buck-boost converter, can either increase or decrease the magnitude of the voltage, but the polarity is inverted.">
+<meta name="twitter:title" content="Buck Converter">
+<meta name="twitter:description" content="Buck Converter equations \[ v_L = v_g - V \approx V_g -V \] \[ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R} \] \[ \frac{dv_c}{dt} = \frac{i_c}{C} \approx \frac{I-\frac{V}{R}}{C} \] \[ \">
 <meta name="twitter:image" content="https://chen-gz.github.io/images/og_image.png">
 
 
@@ -89,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/jojo.svg" alt="Buck Boost Converter" height="28">
+                <img src="/images/jojo.svg" alt="Buck Converter" height="28">
             
             </a>
         </div>
@@ -140,7 +140,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-13T23:13:39.974Z">2019-09-13</time>
+                <time class="level-item has-text-grey" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
@@ -150,7 +150,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 301 words)
+                    4 minutes read (About 624 words)
                 </span>
                 
                 
@@ -159,53 +159,77 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Buck Boost Converter
+                Buck Converter
             
         </h1>
         <div class="content">
-            <h1 id="buck-boost-converter">Buck Boost Converter</h1>
-<h3 id="buck-boost-converter-revert-output-voltage">buck-boost converter revert output voltage</h3>
-<p>Another converter, the buck-boost converter, can either increase or decrease the magnitude of the voltage, but the polarity is inverted. So with a positive input voltage, the ideal buck-boost converter can produce a negative output voltage of any magnitude.</p>
+            <h1 id="buck-converter">Buck Converter</h1>
+<h2 id="equations">equations</h2>
+<p><span class="math display">\[
+v_L = v_g - V \approx V_g -V
+\]</span></p>
+<p><span class="math display">\[
+i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R}
+\]</span></p>
+<p><span class="math display">\[
+\frac{dv_c}{dt} = \frac{i_c}{C} \approx \frac{I-\frac{V}{R}}{C}
+\]</span></p>
+<p><span class="math display">\[
+\frac{di_l}{dt} = \frac{v_L}{L} \approx \frac{V_g-V}{L}
+\]</span></p>
 <a id="more"></a>
-<h3 id="circuit">circuit</h3>
+<h2 id="circuit">circuit</h2>
 <figure>
-<img src="/home/lucas/.config/Typora/typora-user-images/1568423055441.png" alt><figcaption>1568423055441</figcaption>
+<img src="https://cdn.mathpix.com/snip/images/_M6gGUAHbPliyaCoPxV6vYsQCDwB-7SaTn7ctheyrTE.original.fullsize.png" alt><figcaption>buck converter</figcaption>
 </figure>
-<h2 id="why-this-is-a-buck-boost-converter">why this is a buck-boost converter</h2>
-<p>when mos on, the circuit at status 1: <span class="math display">\[
-v_L = V_g \\
-i_C = \frac{v}{R} \approx \frac{V}{R} \\
-\frac{di_L}{dt} = \frac{v_L}{L} \approx \frac{V_g}{L} \\
-\frac{dv_C}{dt} = \frac{i_C}{C} = \frac{v}{RC} \approx \frac{V}{RC}
-\]</span> when mos off, the circuit at status 2: <span class="math display">\[
-v_L = v \approx V \\
-i_C = i_L + i_o \approx I_L + I_o \\
-\frac{di_L}{dt} = \frac{v_L}{L} = \frac{v}{L} \approx \frac{V}{L} \\
-\frac{dv_C}{dt} = \frac{i_C}{C} = \frac{i_L + i_0}{C} \approx \frac{I_L+I_o}{C}
-\]</span> to find out the relationship between input voltage and output voltage equate <span class="math inline">\(&lt;v_L&gt; = 0\)</span>.</p>
-<p><span class="math display">\[
-\frac{V_g}{L}DT_s + \frac{V}{L}D&#39;T_s = 0
-\]</span> then <span class="math display">\[
-V = -\frac{V_g D }{D&#39;}
-\]</span></p>
-<p>from the formula, when <span class="math inline">\(D&lt;D&#39;\)</span> is a buck converter. Otherwise this is a boost converter.</p>
-<p>we can figure out that <span class="math display">\[
-D = \frac{V}{V-V_g}
-\]</span></p>
-<p>set <span class="math inline">\(&lt;i_C&gt; = 0\)</span></p>
-<p><span class="math display">\[
-\frac{V}{RC}DT_s + \frac{I_L+I_o}{C}D&#39;T_s = 0
+<p><img src="https://cdn.mathpix.com/snip/images/6ncIPCZr4oVCyAsn524icBYMQFKuZ3js368UPkgJEx4.original.fullsize.png"></p>
+<h2 id="relationship-of-input-and-output-voltage">relationship of input and output voltage</h2>
+<p>The relationship between input voltage <span class="math inline">\(V_g\)</span> and output voltage $ V_s$: <span class="math display">\[
+V_{s}=\frac{1}{T_{s}} \int_{0}^{T_{s}} v_{s}(t) d t=D V_{g}
+\]</span> <img src="https://cdn.mathpix.com/snip/images/6wZ77ncJ5ZgeRNXhQdlLnaOiIjSViMAlBRUxGmh9P1E.original.fullsize.png"></p>
+<h2 id="dc-component-of-v_st">DC component of <span class="math inline">\(v_s(t)\)</span></h2>
+<p>As illustrated in Fig. <span class="math inline">\(2.2 .\)</span> the integral is given by the area under the curve, or <span class="math inline">\(D T_{s} V_{g}\)</span> . The average value is therefore <span class="math display">\[
+\left\langle v_{s}\right\rangle=\frac{1}{T_{s}}\left(D T_{s} V_{g}\right)=D V_{g}
+\]</span> So the average value, or DC component, of <span class="math inline">\(v_{s}(t)\)</span> is equal to the duty cycle times the DC input voltage <span class="math inline">\(V_{g}\)</span>.</p>
+<h2 id="the-ripple-of-inductor-current">the ripple of inductor current</h2>
+<p>The inductor voltage <span class="math inline">\(v_{L}(t)\)</span> is then given by <span class="math display">\[
+v_{L}=V_{x}-v(t)
+\]</span> The inductor voltage can be found by use of the definition <span class="math display">\[
+v_{L}(t)=L \frac{d i_{L}(t)}{d t}
+\]</span> <img src="https://cdn.mathpix.com/snip/images/bT4Tzk761_LDrkRgsfosMKTpqlKTMGXyLUZT0Sjrh54.original.fullsize.png"> <img src="https://cdn.mathpix.com/snip/images/LSS4uMGqIjjKZyB3UnhCjcWhyCErx4x-f8hgGjqnNE8.original.fullsize.png"> Thus, during the first interval, when <span class="math inline">\(v_{L}(t)\)</span> is approximately <span class="math inline">\(\left(V_{x}-V\right),\)</span> the slope of the inductor current waveform is <span class="math display">\[
+\frac{d i_{L}(t)}{d t}=\frac{v_{L}(t)}{L} \approx \frac{v_{g}-v}{L}
 \]</span></p>
 <p><span class="math display">\[
-I_o = -I_L D&#39; \\ 
-I_L = -\frac{I_o}{D&#39;} = -\frac{V}{RD&#39;}
+\frac{d i_{L}(t)}{d t} \approx-\frac{V}{L}
 \]</span></p>
-<h3 id="ripple">ripple</h3>
-<p>to find <span class="math inline">\(\Delta i_L\)</span> notice that <span class="math inline">\(\frac{di_L}{dt}\)</span> so we can get that <span class="math display">\[
-2\Delta i_L = \frac{V_g}{L}DT_s
-\]</span> to find <span class="math inline">\(\Delta v\)</span> notice that <span class="math inline">\(\frac{dv_C}{dt}\)</span> and $v_C = v $ so we can get that <span class="math display">\[
-2\Delta v_C = \frac{V}{RC}DT_s \\
-\Delta v_C = \frac{-V_g D^2 T_s} {2RC(1-D)}
+<p><img src="https://cdn.mathpix.com/snip/images/n_IxNkgfwePVTMnEdEOXx4y5g6MBJFjpzQCju7CXo_M.original.fullsize.png"></p>
+<h2 id="the-inductor-current-ripple-delta-i_l">the inductor current ripple <span class="math inline">\(\Delta i_{L}\)</span></h2>
+<p>since we know the slope of the inductor curring the first subinterval, and we also know the length of the first subinterval, we can calculate the ripple magnitude. The <span class="math inline">\(i_{t}(t)\)</span> waveform is symmetrical about <span class="math inline">\(I,\)</span> and hence during the first so the change in current increases by 2<span class="math inline">\(\Delta i_{L}\)</span> (since <span class="math inline">\(\Delta i_{1}\)</span> is the peak ripple, the peak-to-peak ripple is <span class="math inline">\(2\Delta i_{l}\)</span>). So the change in current, <span class="math inline">\(2 \Delta i_{L},\)</span> is equal to the slope (the applied inductor voltage divided by <span class="math inline">\(L\)</span> ) times the length of the first subinterval <span class="math inline">\(\left(D T_{s}\right)\)</span> : <span class="math display">\[
+\left(2 \Delta i_{L}\right)=\left(\frac{V_{g}-V}{L}\right)\left(D T_{\mathrm{s}}\right)
+\]</span></p>
+<p><span class="math display">\[
+\Delta i_{L}=\frac{V_{g}-V}{2 L} D T_{\mathrm{s}}
+\]</span></p>
+<h2 id="the-capacitor-voltage-ripple-delta-v_c">the Capacitor voltage ripple <span class="math inline">\(\Delta v_{C}\)</span></h2>
+<h3 id="why-can-not-use-fracdv_cdt-to-calcutlate">why can not use <span class="math inline">\(\frac{dv_c}{dt}\)</span> to calcutlate</h3>
+<h3 id="why-need-use-delta-i_l-to-calculate">why need use <span class="math inline">\(\Delta i_L\)</span> to calculate</h3>
+<h3 id="the-value-of-delta-v_c">the value of <span class="math inline">\(\Delta v_C\)</span></h3>
+<p>By the capacitor relation <span class="math inline">\(Q=C V\)</span> <span class="math display">\[
+q=C(2 \Delta v)
+\]</span></p>
+<p><span class="math display">\[
+q=\frac{1}{2} \Delta i_{L} \frac{T_{s}}{2}
+\]</span></p>
+<p><span class="math display">\[
+\Delta v=\frac{\Delta i_{L} T_{s}}{8 C}
+\]</span></p>
+<h2 id="reduce-peak-to-peak-ripple">reduce peak to peak ripple</h2>
+<p>The inductor value can be chosen such that a desired current ripple <span class="math inline">\(\Delta i_{L}\)</span> is attained. Solution of <span class="math inline">\(Eq. (2.15)\)</span> for the inductance <span class="math inline">\(L\)</span> yields <span class="math display">\[
+L=\frac{V_{k}-V}{2 \Delta i_{L}} D T_{\mathrm{s}}
+\]</span> <img src="https://cdn.mathpix.com/snip/images/1g0OPaNI3J_GFCqS2icfdgWoVawPDMRUhk7fNLv_Abk.original.fullsize.png"></p>
+<h2 id="fit-continue-conduction-mode-get-l_min">fit continue conduction mode get <span class="math inline">\(L_{min}\)</span></h2>
+<p><span class="math display">\[
+L=\frac{V_{g}-V}{2 \Delta i_{l}} D T_{\mathrm{s}}
 \]</span></p>
 
         </div>
@@ -232,12 +256,19 @@ I_L = -\frac{I_o}{D&#39;} = -\frac{V}{RD&#39;}
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/13/linear-control-system/1/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/14/Power-Electric/SEPIC-Converter/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">linear control system</span>
+                <span class="level-item">SEPIC-Converter</span>
             </a>
         </div>
         
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/13/Power-Electric/Foundation-And-Basic-Concept/">
+                <span class="level-item">Foundation and Basic Concept</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
         
     </div>
 </div>
@@ -331,26 +362,58 @@ I_L = -\frac{I_o}{D&#39;} = -\frac{V}{RD&#39;}
                 Catalogue
             </h3>
             <ul class="menu-list"><li>
-        <a class="is-flex" href="#buck-boost-converter">
+        <a class="is-flex" href="#buck-converter">
         <span class="has-mr-6">1</span>
-        <span>Buck Boost Converter</span>
-        </a><ul class="menu-list"><ul class="menu-list"><li>
-        <a class="is-flex" href="#buck-boost-converter-revert-output-voltage">
-        <span class="has-mr-6">1.1.1</span>
-        <span>buck-boost converter revert output voltage</span>
+        <span>Buck Converter</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#equations">
+        <span class="has-mr-6">1.1</span>
+        <span>equations</span>
         </a></li><li>
         <a class="is-flex" href="#circuit">
-        <span class="has-mr-6">1.1.2</span>
-        <span>circuit</span>
-        </a></li></ul><li>
-        <a class="is-flex" href="#why-this-is-a-buck-boost-converter">
         <span class="has-mr-6">1.2</span>
-        <span>why this is a buck-boost converter</span>
+        <span>circuit</span>
+        </a></li><li>
+        <a class="is-flex" href="#relationship-of-input-and-output-voltage">
+        <span class="has-mr-6">1.3</span>
+        <span>relationship of input and output voltage</span>
+        </a></li><li>
+        <a class="is-flex" href="#dc-component-of-v_st">
+        <span class="has-mr-6">1.4</span>
+        <span>DC component of \(v_s(t)\)</span>
+        </a></li><li>
+        <a class="is-flex" href="#the-ripple-of-inductor-current">
+        <span class="has-mr-6">1.5</span>
+        <span>the ripple of inductor current</span>
+        </a></li><li>
+        <a class="is-flex" href="#the-inductor-current-ripple-delta-i_l">
+        <span class="has-mr-6">1.6</span>
+        <span>the inductor current ripple \(\Delta i_{L}\)</span>
+        </a></li><li>
+        <a class="is-flex" href="#the-capacitor-voltage-ripple-delta-v_c">
+        <span class="has-mr-6">1.7</span>
+        <span>the Capacitor voltage ripple \(\Delta v_{C}\)</span>
         </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#ripple">
-        <span class="has-mr-6">1.2.1</span>
-        <span>ripple</span>
-        </a></li></ul></li></ul></li></ul>
+        <a class="is-flex" href="#why-can-not-use-fracdv_cdt-to-calcutlate">
+        <span class="has-mr-6">1.7.1</span>
+        <span>why can not use \(\frac{dv_c}{dt}\) to calcutlate</span>
+        </a></li><li>
+        <a class="is-flex" href="#why-need-use-delta-i_l-to-calculate">
+        <span class="has-mr-6">1.7.2</span>
+        <span>why need use \(\Delta i_L\) to calculate</span>
+        </a></li><li>
+        <a class="is-flex" href="#the-value-of-delta-v_c">
+        <span class="has-mr-6">1.7.3</span>
+        <span>the value of \(\Delta v_C\)</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#reduce-peak-to-peak-ripple">
+        <span class="has-mr-6">1.8</span>
+        <span>reduce peak to peak ripple</span>
+        </a></li><li>
+        <a class="is-flex" href="#fit-continue-conduction-mode-get-l_min">
+        <span class="has-mr-6">1.9</span>
+        <span>fit continue conduction mode get \(L_{min}\)</span>
+        </a></li></ul></li></ul>
         </div>
     </div>
 </div>
@@ -390,7 +453,7 @@ I_L = -\frac{I_o}{D&#39;} = -\frac{V}{RD&#39;}
                 <span class="level-item">power electric</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">4</span>
             </span>
         </a></li>
             </ul>
@@ -415,20 +478,7 @@ I_L = -\frac{I_o}{D&#39;} = -\frac{V}{RD&#39;}
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-14T14:20:03.617Z">2019-09-14</time></div>
-                    <a href="/2019/09/14/power-electric/SEPIC-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
-                    <a href="/2019/09/13/power-electric/Buck-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Buck Converter</a>
+                    <a href="/2019/09/14/Power-Electric/SEPIC-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">SEPIC-Converter</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
                     </p>
@@ -441,7 +491,20 @@ I_L = -\frac{I_o}{D&#39;} = -\frac{V}{RD&#39;}
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
-                    <a href="/2019/09/13/power-electric/Foundation-And-Basic-Concept/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Foundation and Basic Concept</a>
+                    <a href="/2019/09/13/Power-Electric/Buck-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Buck Converter</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/Power-Electric/Foundation-And-Basic-Concept/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Foundation and Basic Concept</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
                     </p>
@@ -467,7 +530,7 @@ I_L = -\frac{I_o}{D&#39;} = -\frac{V}{RD&#39;}
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:13:39.974Z">2019-09-13</time></div>
-                    <a href="/2019/09/13/linear-control-system/1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">linear control system</a>
+                    <a href="/2019/09/13/Linear-Control-System/Basic-Information/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Basic Information</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/linear-control-system/">linear-control-system</a> / <a class="has-link-grey -link" href="/categories/linear-control-system/First/">First</a>
                     </p>
@@ -539,20 +602,7 @@ I_L = -\frac{I_o}{D&#39;} = -\frac{V}{RD&#39;}
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-14T14:20:03.617Z">2019-09-14</time></div>
-                    <a href="/2019/09/14/power-electric/SEPIC-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
-                    <a href="/2019/09/13/power-electric/Buck-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Buck Converter</a>
+                    <a href="/2019/09/14/Power-Electric/SEPIC-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">SEPIC-Converter</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
                     </p>
@@ -565,7 +615,20 @@ I_L = -\frac{I_o}{D&#39;} = -\frac{V}{RD&#39;}
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
-                    <a href="/2019/09/13/power-electric/Foundation-And-Basic-Concept/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Foundation and Basic Concept</a>
+                    <a href="/2019/09/13/Power-Electric/Buck-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Buck Converter</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/Power-Electric/Foundation-And-Basic-Concept/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Foundation and Basic Concept</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
                     </p>
@@ -591,7 +654,7 @@ I_L = -\frac{I_o}{D&#39;} = -\frac{V}{RD&#39;}
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:13:39.974Z">2019-09-13</time></div>
-                    <a href="/2019/09/13/linear-control-system/1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">linear control system</a>
+                    <a href="/2019/09/13/Linear-Control-System/Basic-Information/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Basic Information</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/linear-control-system/">linear-control-system</a> / <a class="has-link-grey -link" href="/categories/linear-control-system/First/">First</a>
                     </p>
@@ -652,7 +715,7 @@ I_L = -\frac{I_o}{D&#39;} = -\frac{V}{RD&#39;}
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/jojo.svg" alt="Buck Boost Converter" height="28">
+                    <img src="/images/jojo.svg" alt="Buck Converter" height="28">
                 
                 </a>
                 <p class="is-size-7">

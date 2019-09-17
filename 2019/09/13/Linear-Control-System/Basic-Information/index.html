@@ -7,21 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Buck Converter - Dog and Cat</title>
+<title>Basic Information - Dog and Cat</title>
 
 
-    <meta name="description" content="Buck Converter equations \[ v_L = v_g - V \approx V_g -V \] \[ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R} \] \[ \frac{dv_c}{dt} = \frac{i_c}{C} \approx \frac{I-\frac{V}{R}}{C} \] \[ \">
+    <meta name="description" content="Basic Information The systems to be studied in this text are limited to linear systems. Using the concept of linearity, we develop in Chapter 2 that every linear system can be described by \[ \mathbf{">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Buck Converter">
-<meta property="og:url" content="https://chen-gz.github.io/2019/09/13/power-electric/Buck-Converter/index.html">
+<meta property="og:title" content="Basic Information">
+<meta property="og:url" content="https://chen-gz.github.io/2019/09/13/Linear-Control-System/Basic-Information/index.html">
 <meta property="og:site_name" content="Dog and Cat">
-<meta property="og:description" content="Buck Converter equations \[ v_L = v_g - V \approx V_g -V \] \[ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R} \] \[ \frac{dv_c}{dt} = \frac{i_c}{C} \approx \frac{I-\frac{V}{R}}{C} \] \[ \">
+<meta property="og:description" content="Basic Information The systems to be studied in this text are limited to linear systems. Using the concept of linearity, we develop in Chapter 2 that every linear system can be described by \[ \mathbf{">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://chen-gz.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-09-13T23:37:03.477Z">
+<meta property="og:updated_time" content="2019-09-17T00:23:41.587Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Buck Converter">
-<meta name="twitter:description" content="Buck Converter equations \[ v_L = v_g - V \approx V_g -V \] \[ i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R} \] \[ \frac{dv_c}{dt} = \frac{i_c}{C} \approx \frac{I-\frac{V}{R}}{C} \] \[ \">
+<meta name="twitter:title" content="Basic Information">
+<meta name="twitter:description" content="Basic Information The systems to be studied in this text are limited to linear systems. Using the concept of linearity, we develop in Chapter 2 that every linear system can be described by \[ \mathbf{">
 <meta name="twitter:image" content="https://chen-gz.github.io/images/og_image.png">
 
 
@@ -89,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/jojo.svg" alt="Buck Converter" height="28">
+                <img src="/images/jojo.svg" alt="Basic Information" height="28">
             
             </a>
         </div>
@@ -140,17 +140,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time>
+                <time class="level-item has-text-grey" datetime="2019-09-13T23:13:39.974Z">2019-09-13</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
+                <a class="has-link-grey -link" href="/categories/linear-control-system/">linear-control-system</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/linear-control-system/First/">First</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 minutes read (About 578 words)
+                    13 minutes read (About 1983 words)
                 </span>
                 
                 
@@ -159,65 +159,114 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Buck Converter
+                Basic Information
             
         </h1>
         <div class="content">
-            <h1 id="buck-converter">Buck Converter</h1>
-<h2 id="equations">equations</h2>
+            <h2 id="basic-information">Basic Information</h2>
+<p>The systems to be studied in this text are limited to linear systems. Using the concept of linearity, we develop in Chapter 2 that every linear system can be described by <span class="math display">\[
+\mathbf{y}(t)=\int_{t_{0}}^{t} \mathbf{G}(t, \tau) \mathbf{u}(\tau) d \tau
+\]</span> <a id="more"></a> This equation describes the relationship between the input u and output y and is called the input–output or external description. If a linear system is lumped as well, then it can also be described by <span class="math display">\[
+\begin{aligned}
+\dot{\mathbf{x}}(t) &amp;=\mathbf{A}(t) \mathbf{x}(t)+\mathbf{B}(t) \mathbf{u}(t) \\ \mathbf{y}(t) &amp;=\mathbf{C}(t) \mathbf{x}(t)+\mathbf{D}(t) \mathbf{u}(t) 
+\end{aligned}
+\]</span> <span class="math inline">\(Equation (1.2)\)</span> is a set of ﬁrst-order differential equations and <span class="math inline">\(Equation (1.3)\)</span> is a set of algebraic equations. They are called the internal description of linear systems. Because the vector x is called the state, the set of two equations is called the state-space or, simply, the state equation.</p>
+<p>If a linear system has, in addition, the property of time invariance, then <span class="math inline">\(Equations (1.1)\)</span> through <span class="math inline">\((1.3)\)</span> reduce to <span class="math display">\[
+\mathbf{y}(t)=\int_{0}^{t} \mathbf{G}(t-\tau) \mathbf{u}(\tau) d \tau
+\]</span> and <span class="math display">\[
+\begin{array}{c}
+{\dot{\mathbf{x}}(t)=\mathbf{A} \mathbf{x}(t)+\mathbf{B u}(t)} \\ {\mathbf{y}(t)=\mathbf{C x}(t)+\mathbf{D} \mathbf{u}(t)}\end{array}
+\]</span> For this class of linear time-invariant systems, the Laplace transform is an important tool in analysis and design. Applying the Laplace transform to (1.4) yields <span class="math display">\[
+\hat{\mathbf{y}}(s)=\hat{\mathbf{G}}(s) \hat{\mathbf{u}}(s)
+\]</span> where a variable with a circumﬂex denotes the Laplace transform of the variable. The function <span class="math inline">\(\hat{G}(s)\)</span> is called the <em>transfer matrix</em>. Both <span class="math inline">\((1.4)\)</span> and <span class="math inline">\((1.7)\)</span> are input–output or external descriptions. The former is said to be in the time domain and the latter in the frequency domain. <span class="math inline">\(Equations (1.1)\)</span> through <span class="math inline">\((1.6)\)</span> are called continuous-time equations because their time</p>
+<h2 id="defines">defines</h2>
+<p><em>SISO</em></p>
+<p>A system with only one input terminal and only one output terminal is called a single-variable system or a single-input single-output (SISO) system.</p>
+<p><em>MIMO</em></p>
+<p>A system with two or more input terminals and/or two or more output terminals is called a multi-variable system. More speciﬁcally, we can call a system a multi-input multi-output (MIMO) system if it has two or more input terminals and output terminals.</p>
+<p><em>SIMO</em></p>
+<p>A single-input multi-output (SIMO) system if it has one input terminal and two or more output terminals.</p>
+<p><em>continuous-time</em></p>
+<p>A system is called a continuous-time system if it accepts continuous-time signals as its input and generates continuous-time signals as its output.</p>
+<p><em>discrete-time</em></p>
+<p>A system is called a discrete-time system if it accepts discrete-time signals as its input and generates discrete-time signals as its output.</p>
+<p><em>memoryless system</em></p>
+<p>A system is called a memoryless system if its output y(t 0 ) depends only on the input applied at t 0 ; it is independent of the input applied before or after t 0 . This will be stated succinctly as follows: current output of a memoryless system depends only on current input; it is independent of past and future inputs.</p>
+<p><em>causal or non-anticipatory</em></p>
+<p>A system is called a causal or non-anticipatory system if its current output depends on past and current inputs but not on future input. If a system is not causal, then its current output will depend on future input. In other words, a non-causal system can predict or anticipate what will be applied in the future. No physical system has such capability. Therefore every physical system is causal and causality is a necessary condition for a system to be built or implemented in the real world. This text studies only causal systems.</p>
+<p><img src="https://cdn.mathpix.com/snip/images/SS39b_F6XhCg1YDMsDbnWJ5O4bin0N1O2TEFof_E9VY.original.fullsize.png"></p>
+<p>Using the state at <span class="math inline">\(t_0\)</span> , we can express the input and output of a system as</p>
 <p><span class="math display">\[
-v_L = v_g - V \approx V_g -V
+\left. \begin{array}{l}{\mathbf{x}\left(t_{0}\right)} \\ {\mathbf{u}(t), t \geq t_{0}}\end{array} \right\} \rightarrow \mathbf{y}(t), \quad t \geq t_{0}
 \]</span></p>
+<p>It means that the output is partly excited by the initial state at t 0 and partly by the input applied at and after t 0 . In using (2.1), there is no more need to know the input applied before t 0 all the way back to −∞. Thus (2.1) is easier to track and will be called a state-input–output pair. A system is said to be lumped if its number of state variables is ﬁnite or its state is a</p>
+<p><em>lumped</em></p>
+<p>A system is said to be lumped if its number of state variables is ﬁnite or its state is a ﬁnite vector. The network in Fig. 2.2 is clearly a lumped system; its state consists of three numbers.</p>
+<p><em>distributed</em></p>
+<p>A system is called a distributed system if its state has inﬁnitely many state variables. The transmission line is the most well known distributed system.</p>
+<p><em>linear system</em> <em>additivity, homogeneity and superpositition</em> Systems A system is called a linear system if for every t_0 and any two state-input–output pairs</p>
 <p><span class="math display">\[
-i_c = i_L - \frac{V}{R} = i_L - I_o \approx I - \frac{V}{R}
-\]</span></p>
+\left.
+\begin{array}{l}{\mathbf{x}\left(t_{0}\right)} \\ {\mathbf{u}(t), t \geq t_{0}}\end{array}\right\} \rightarrow \mathbf{y}(t), \quad t \geq t_{0}
+\]</span> for <span class="math inline">\(i =1,2\)</span>, we have <span class="math display">\[
+\left.
+\begin{array}{rl}{\mathbf{x}_{1}\left(t_{0}\right)+\mathbf{x}_{2}\left(t_{0}\right)} &amp; {} \\ {\mathbf{u}_{1}(t)+\mathbf{u}_{2}(t),} &amp; {t \geq t_{0}}\end{array}\right\}  \rightarrow \mathbf{y}_{1}(t)+\mathbf{y}_{2}(t), \quad t \geq t_{0} \text { (additivity) }
+\]</span> and <span class="math display">\[
+\left.
+\begin{array}{l}{\alpha \mathbf{x}_{1}\left(t_{0}\right)} \\ {\alpha \mathbf{u}_{1}(t), \quad t \geq t_{0}}\end{array} \right\} \rightarrow \alpha \mathbf{y}_{1}(t), \quad t \geq t_{0} \text { (homogeneity) }
+\]</span> for any real constant <span class="math inline">\(\alpha\)</span>. The ﬁrst property is called the additivity property, the second, the homogeneity property. These two properties can be combined as <span class="math display">\[
+\left.
+\begin{array}{l}{\alpha_{1} \mathbf{x}_{1}\left(t_{0}\right)+\alpha_{2} \mathbf{x}_{2}\left(t_{0}\right)} \\ {\alpha_{1} \mathbf{u}_{1}(t)+\alpha_{2} \mathbf{u}_{2}(t), \quad t \geq t_{0}}\end{array} \right \} \rightarrow \alpha_{1} \mathbf{y}_{1}(t)+\alpha_{2} \mathbf{y}_{2}(t), \quad t \geq t_{0}
+\]</span> for any real constants <span class="math inline">\(\alpha_1\)</span> and <span class="math inline">\(\alpha_2\)</span>, and is called the superposition property. A system is called a nonlinear system if the superposition property does not hold.</p>
+<p><em>zero input response</em></p>
+<p>If the input <span class="math inline">\(\mathbf{u}(t)\)</span> is identically zero for <span class="math inline">\(t \geq t_{0}\)</span> , then the output will be excited exclusively by the initial state <span class="math inline">\(\mathbf{x}\left(t_{0}\right).\)</span> This output is called the zero-input response and will be denoted by<span class="math inline">\(\mathbf{y}_{z i}\)</span> or</p>
 <p><span class="math display">\[
-\frac{dv_c}{dt} = \frac{i_c}{C} \approx \frac{I-\frac{V}{R}}{C}
+\left.
+\begin{array}{l}{\mathbf{x}\left(t_{0}\right)} \\ {\mathbf{u}(t) \equiv \mathbf{0}, t \geq t_{0}}\end{array}\right \}\rightarrow \mathbf{y}_{z i}(t), \quad t \geq t_{0}
+\]</span> <em>zero state response</em></p>
+<p>If the initial state <span class="math inline">\(\mathbf{x}\left(t_{0}\right)\)</span> is zero, then the output will be excited exclusively by the input. This output is called the zero-state response and will be denoted by <span class="math inline">\(\mathbf{y}_{z s}\)</span> or <span class="math display">\[
+\left.
+\begin{array}{rl}{\mathbf{x}\left(t_{0}\right)=}  {\mathbf{0}} \\ {\mathbf{u}(t),} 4 {t \geq t_{0}}\end{array}\right\} \rightarrow \mathbf{y}_{z s}(t), \quad t \geq t_{0}
 \]</span></p>
+<h2 id="input-output-description">input-output description</h2>
+<p>Consequently, the input u(t) can be expressed symbolically as <span class="math display">\[
+u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \Delta
+\]</span></p>
+<p>Let <span class="math inline">\(g_{\Delta}\left(t, t_{i}\right)\)</span> be the output at time <span class="math inline">\(t\)</span> excited by the pulse <span class="math inline">\(u(t)=\delta_{\Delta}\left(t-t_{i}\right)\)</span> applied at time <span class="math inline">\(t_{i}\)</span>. Then we have</p>
 <p><span class="math display">\[
-\frac{di_l}{dt} = \frac{v_L}{L} \approx \frac{V_g-V}{L}
+\begin{aligned} \delta_{\Delta}\left(t-t_{i}\right) &amp; \rightarrow g_{\Delta}\left(t, t_{i}\right) \\
+\delta_{\Delta}\left(t-t_{i}\right) u\left(t_{i}\right) \Delta &amp; \rightarrow g_{\Delta}\left(t, t_{i}\right) u\left(t_{i}\right) \Delta \quad \text { (homogeneity) } \\
+\sum_{i} \delta_{\Delta}\left(t-t_{i}\right) u\left(t_{i}\right) \Delta &amp; \rightarrow \sum_{i} g_{\Delta}\left(t, t_{i}\right) u\left(t_{i}\right) \Delta \quad \text { (additivity) } \end{aligned}
+\]</span> Thus the output <span class="math inline">\(y(t)\)</span> excited by the input <span class="math inline">\(u(t)\)</span> can be approximated by <span class="math display">\[
+y(t) \approx \sum_{i} g_{\Delta}\left(t, t_{i}\right) u\left(t_{i}\right) \Delta
 \]</span></p>
-<a id="more"></a>
-<h2 id="circuit">circuit</h2>
-<figure>
-<img src="https://cdn.mathpix.com/snip/images/_M6gGUAHbPliyaCoPxV6vYsQCDwB-7SaTn7ctheyrTE.original.fullsize.png" alt><figcaption>buck converter</figcaption>
-</figure>
-<p><img src="https://cdn.mathpix.com/snip/images/6ncIPCZr4oVCyAsn524icBYMQFKuZ3js368UPkgJEx4.original.fullsize.png"></p>
-<h2 id="relationship-of-input-and-output-voltage">relationship of input and output voltage</h2>
-<p>The relationship between input voltage <span class="math inline">\(V_g\)</span> and output voltage $ V_s$: <span class="math display">\[
-V_{s}=\frac{1}{T_{s}} \int_{0}^{T_{s}} v_{s}(t) d t=D V_{g}
-\]</span> <img src="https://cdn.mathpix.com/snip/images/6wZ77ncJ5ZgeRNXhQdlLnaOiIjSViMAlBRUxGmh9P1E.original.fullsize.png"></p>
-<h2 id="dc-component-of-v_st">DC component of <span class="math inline">\(v_s(t)\)</span></h2>
-<p>As illustrated in Fig. <span class="math inline">\(2.2 .\)</span> the integral is given by the area under the curve, or <span class="math inline">\(D T_{s} V_{g}\)</span> . The average value is therefore <span class="math display">\[
-\left\langle v_{s}\right\rangle=\frac{1}{T_{s}}\left(D T_{s} V_{g}\right)=D V_{g}
-\]</span> So the average value, or DC component, of <span class="math inline">\(v_{s}(t)\)</span> is equal to the duty cycle times the DC input voltage <span class="math inline">\(V_{g}\)</span>.</p>
-<h2 id="the-ripple-of-inductor-current">the ripple of inductor current</h2>
-<p>The inductor voltage <span class="math inline">\(v_{L}(t)\)</span> is then given by <span class="math display">\[
-v_{L}=V_{x}-v(t)
-\]</span> The inductor voltage can be found by use of the definition <span class="math display">\[
-v_{L}(t)=L \frac{d i_{L}(t)}{d t}
-\]</span> <img src="https://cdn.mathpix.com/snip/images/bT4Tzk761_LDrkRgsfosMKTpqlKTMGXyLUZT0Sjrh54.original.fullsize.png"> <img src="https://cdn.mathpix.com/snip/images/LSS4uMGqIjjKZyB3UnhCjcWhyCErx4x-f8hgGjqnNE8.original.fullsize.png"> Thus, during the first interval, when <span class="math inline">\(v_{L}(t)\)</span> is approximately <span class="math inline">\(\left(V_{x}-V\right),\)</span> the slope of the inductor current waveform is <span class="math display">\[
-\frac{d i_{L}(t)}{d t}=\frac{v_{L}(t)}{L} \approx \frac{v_{g}-v}{L}
-\]</span></p>
+<p>Now if <span class="math inline">\(\Delta\)</span> approaches zero, the pulse <span class="math inline">\(\delta_{\Delta}\left(t-t_{i}\right)\)</span> becomes an impulse at <span class="math inline">\(t_{i},\)</span> denoted by <span class="math inline">\(\delta\left(t-t_{i}\right),\)</span> and the corresponding output will be denoted by <span class="math inline">\(g\left(t, t_{i}\right) .\)</span> As <span class="math inline">\(\Delta\)</span> approaches zero, the approximation in <span class="math inline">\((2.2)\)</span> becomes an equality, the summation becomes an integration, the discrete <span class="math inline">\(t_{i}\)</span> becomes a continuum and can be replaced by <span class="math inline">\(\tau,\)</span> and <span class="math inline">\(\Delta\)</span> can be written as <span class="math inline">\(d \tau .\)</span> Thus <span class="math inline">\((2.2)\)</span> becomes</p>
 <p><span class="math display">\[
-\frac{d i_{L}(t)}{d t} \approx-\frac{V}{L}
+y(t)=\int_{-\infty}^{\infty} g(t, \tau) u(\tau) d \tau
+\]</span> Note that <span class="math inline">\(g(t, \tau)\)</span> is a function of two variables. The second variable denotes the time at which the impulse input is applied; the ﬁrst variable denotes the time at which the output is observed. Because <span class="math inline">\(g(t,\tau)\)</span> is the response excited by an impulse, it is called the impulse response. If a system is causal, the output will not appear before an input is applied. Thus we have <span class="math display">\[
+\text { Causal } \Longleftrightarrow g(t, \tau)=0 \text { for } t&lt;\tau
 \]</span></p>
-<p><img src="https://cdn.mathpix.com/snip/images/n_IxNkgfwePVTMnEdEOXx4y5g6MBJFjpzQCju7CXo_M.original.fullsize.png"></p>
-<h2 id="the-inductor-current-ripple-delta-i_l">the inductor current ripple <span class="math inline">\(\Delta i_{L}\)</span></h2>
-<p>since we know the slope of the inductor curring the first subinterval, and we also know the length of the first subinterval, we can calculate the ripple magnitude. The <span class="math inline">\(i_{t}(t)\)</span> waveform is symmetrical about <span class="math inline">\(I,\)</span> and hence during the first so the change in current increases by 2<span class="math inline">\(\Delta i_{L}\)</span> (since <span class="math inline">\(\Delta i_{1}\)</span> is the peak ripple, the peak-to-peak ripple is <span class="math inline">\(2\Delta i_{l}\)</span>). So the change in current, <span class="math inline">\(2 \Delta i_{L},\)</span> is equal to the slope (the applied inductor voltage divided by <span class="math inline">\(L\)</span> ) times the length of the first subinterval <span class="math inline">\(\left(D T_{s}\right)\)</span> : <span class="math display">\[
-\left(2 \Delta i_{L}\right)=\left(\frac{V_{g}-V}{L}\right)\left(D T_{\mathrm{s}}\right)
-\]</span></p>
+<p><em>relax</em></p>
+<p>A system is said to be relaxed at <span class="math inline">\(t_0\)</span> if its initial state at <span class="math inline">\(t_0\)</span> is 0. In this case, the output <span class="math inline">\(y(t)\)</span>, for <span class="math inline">\(t ≥ t_0\)</span> , is excited exclusively by the input <span class="math inline">\(u(t)\)</span> for <span class="math inline">\(t \geq 0\)</span>.</p>
+<p>In conclusion, every linear system that is causal and relaxed at <span class="math inline">\(t_0\)</span> can be described by <span class="math display">\[
+\mathbf{G}(t, \tau)=\left[\begin{array}{cccc}{g_{11}(t, \tau)} &amp; {g_{12}(t, \tau)} &amp; {\cdots} &amp; {g_{1 p}(t, \tau)} \\\ {g_{21}(t, \tau)} &amp; {g_{22}(t, \tau)} &amp; {\cdots} &amp; {g_{2 p}(t, \tau)} \\\ {\vdots} &amp; {\vdots} &amp; {} &amp; {\vdots} \\\ {g_{q 1}(t, \tau)} &amp; {g_{q 2}(t, \tau)} &amp; {\cdots} &amp; {g_{q p}(t, \tau)}\end{array}\right]
+\]</span> where <span class="math display">\[
+\mathbf{y}(t)=\int_{t_{0}}^{t} \mathbf{G}(t, \tau) \mathbf{u}(\tau) d \tau
+\]</span> and <span class="math inline">\(g_{ij}(t,\tau)\)</span> is the response at time <span class="math inline">\(t\)</span> at the <span class="math inline">\(i\)</span>th output terminal due to an impulse applied at time <span class="math inline">\(\tau\)</span> at the <span class="math inline">\(j\)</span> th input terminal, the inputs at other terminals being identically zero.</p>
+<p>That is, <span class="math inline">\(g_i{ij}(t, \tau )\)</span> is the impulse response between the <span class="math inline">\(j\)</span> th input terminal and the ith output terminal. Thus G is called the <em>impulse response matrix</em> of the system.</p>
+<h2 id="linear-time-invariantlti-systems">Linear Time-Invariant(LTI) Systems</h2>
+<p><em>time invariant</em></p>
+<p>A system is said to be time invariant if for every state-input–output pair</p>
 <p><span class="math display">\[
-\Delta i_{L}=\frac{V_{g}-V}{2 L} D T_{\mathrm{s}}
+\left.
+\begin{array}{l}{\mathbf{x}\left(t_{0}\right)} \\\ {\mathbf{u}(t), t \geq t_{0}}\end{array}\right\} \rightarrow \mathbf{y}(t), \quad t \geq t_{0}
+\]</span> and any <span class="math inline">\(T\)</span>, we have <span class="math display">\[
+\left.
+\begin{array}{l}{\mathbf{x}\left(t_{0}+T\right)} \\ {\mathbf{u}(t-T), t \geq t_{0}+T}\end{array}\right\} \rightarrow \mathbf{y}(t-T), t \geq t_{0}+T \quad \text { (time shifting) }
 \]</span></p>
-<h2 id="the-capacitor-voltage-ripple-delta-v_c">the Capacitor voltage ripple <span class="math inline">\(\Delta v_{C}\)</span></h2>
-<h3 id="why-can-not-use-fracdv_cdt-to-calcutlate">why can not use <span class="math inline">\(\frac{dv_c}{dt}\)</span> to calcutlate</h3>
-<h3 id="why-need-use-delta-i_l-to-calculate">why need use <span class="math inline">\(\Delta i_L\)</span> to calculate</h3>
-<h2 id="reduce-peak-to-peak-ripple">reduce peak to peak ripple</h2>
-<p>The inductor value can be chosen such that a desired current ripple <span class="math inline">\(\Delta i_{L}\)</span> is attained. Solution of <span class="math inline">\(Eq. (2.15)\)</span> for the inductance <span class="math inline">\(L\)</span> yields <span class="math display">\[
-L=\frac{V_{k}-V}{2 \Delta i_{L}} D T_{\mathrm{s}}
-\]</span> <img src="https://cdn.mathpix.com/snip/images/1g0OPaNI3J_GFCqS2icfdgWoVawPDMRUhk7fNLv_Abk.original.fullsize.png"></p>
-<h2 id="fit-continue-conduction-mode-get-l_min">fit continue conduction mode get <span class="math inline">\(L_{min}\)</span></h2>
+<p>It means that if the initial state is shifted to time <span class="math inline">\(t_0 + T\)</span> and the same input waveform is applied from <span class="math inline">\(t_0 + T\)</span> instead of from <span class="math inline">\(t_0\)</span> , then the output waveform will be the same except that it starts to appear from time <span class="math inline">\(t_0 + T\)</span> . In other words, if the initial state and the input are the same, no matter at what time they are applied, the output waveform will always be the same. Therefore, for time-invariant systems, we can always assume, without loss of generality, that <span class="math inline">\(t_0 = 0\)</span>. If a system is not time invariant, it is said to be <em>time varying</em>.</p>
+<p>this also means <span class="math inline">\(g(t) = 0, t&lt;t_0\)</span></p>
+<p>Here need to add some comment. When I have time.</p>
 
         </div>
         
@@ -243,16 +292,16 @@ L=\frac{V_{k}-V}{2 \Delta i_{L}} D T_{\mathrm{s}}
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/14/power-electric/SEPIC-Converter/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/13/Probability-and-Random-Processes/a1/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item"></span>
+                <span class="level-item">Probablity and Random Processes</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/13/power-electric/Foundation-And-Basic-Concept/">
-                <span class="level-item">Foundation and Basic Concept</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/13/Power-Electric/Buck-Boost-Converter/">
+                <span class="level-item">Buck Boost Converter</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -349,54 +398,22 @@ L=\frac{V_{k}-V}{2 \Delta i_{L}} D T_{\mathrm{s}}
                 Catalogue
             </h3>
             <ul class="menu-list"><li>
-        <a class="is-flex" href="#buck-converter">
+        <a class="is-flex" href="#basic-information">
         <span class="has-mr-6">1</span>
-        <span>Buck Converter</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#equations">
-        <span class="has-mr-6">1.1</span>
-        <span>equations</span>
+        <span>Basic Information</span>
         </a></li><li>
-        <a class="is-flex" href="#circuit">
-        <span class="has-mr-6">1.2</span>
-        <span>circuit</span>
+        <a class="is-flex" href="#defines">
+        <span class="has-mr-6">2</span>
+        <span>defines</span>
         </a></li><li>
-        <a class="is-flex" href="#relationship-of-input-and-output-voltage">
-        <span class="has-mr-6">1.3</span>
-        <span>relationship of input and output voltage</span>
+        <a class="is-flex" href="#input-output-description">
+        <span class="has-mr-6">3</span>
+        <span>input-output description</span>
         </a></li><li>
-        <a class="is-flex" href="#dc-component-of-v_st">
-        <span class="has-mr-6">1.4</span>
-        <span>DC component of \(v_s(t)\)</span>
-        </a></li><li>
-        <a class="is-flex" href="#the-ripple-of-inductor-current">
-        <span class="has-mr-6">1.5</span>
-        <span>the ripple of inductor current</span>
-        </a></li><li>
-        <a class="is-flex" href="#the-inductor-current-ripple-delta-i_l">
-        <span class="has-mr-6">1.6</span>
-        <span>the inductor current ripple \(\Delta i_{L}\)</span>
-        </a></li><li>
-        <a class="is-flex" href="#the-capacitor-voltage-ripple-delta-v_c">
-        <span class="has-mr-6">1.7</span>
-        <span>the Capacitor voltage ripple \(\Delta v_{C}\)</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#why-can-not-use-fracdv_cdt-to-calcutlate">
-        <span class="has-mr-6">1.7.1</span>
-        <span>why can not use \(\frac{dv_c}{dt}\) to calcutlate</span>
-        </a></li><li>
-        <a class="is-flex" href="#why-need-use-delta-i_l-to-calculate">
-        <span class="has-mr-6">1.7.2</span>
-        <span>why need use \(\Delta i_L\) to calculate</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#reduce-peak-to-peak-ripple">
-        <span class="has-mr-6">1.8</span>
-        <span>reduce peak to peak ripple</span>
-        </a></li><li>
-        <a class="is-flex" href="#fit-continue-conduction-mode-get-l_min">
-        <span class="has-mr-6">1.9</span>
-        <span>fit continue conduction mode get \(L_{min}\)</span>
-        </a></li></ul></li></ul>
+        <a class="is-flex" href="#linear-time-invariantlti-systems">
+        <span class="has-mr-6">4</span>
+        <span>Linear Time-Invariant(LTI) Systems</span>
+        </a></li></ul>
         </div>
     </div>
 </div>
@@ -436,7 +453,7 @@ L=\frac{V_{k}-V}{2 \Delta i_{L}} D T_{\mathrm{s}}
                 <span class="level-item">power electric</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">4</span>
             </span>
         </a></li>
             </ul>
@@ -461,20 +478,7 @@ L=\frac{V_{k}-V}{2 \Delta i_{L}} D T_{\mathrm{s}}
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-14T14:20:03.617Z">2019-09-14</time></div>
-                    <a href="/2019/09/14/power-electric/SEPIC-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
-                    <a href="/2019/09/13/power-electric/Buck-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Buck Converter</a>
+                    <a href="/2019/09/14/Power-Electric/SEPIC-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">SEPIC-Converter</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
                     </p>
@@ -487,7 +491,20 @@ L=\frac{V_{k}-V}{2 \Delta i_{L}} D T_{\mathrm{s}}
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
-                    <a href="/2019/09/13/power-electric/Foundation-And-Basic-Concept/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Foundation and Basic Concept</a>
+                    <a href="/2019/09/13/Power-Electric/Buck-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Buck Converter</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/Power-Electric/Foundation-And-Basic-Concept/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Foundation and Basic Concept</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
                     </p>
@@ -513,7 +530,7 @@ L=\frac{V_{k}-V}{2 \Delta i_{L}} D T_{\mathrm{s}}
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:13:39.974Z">2019-09-13</time></div>
-                    <a href="/2019/09/13/linear-control-system/1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">linear control system</a>
+                    <a href="/2019/09/13/Linear-Control-System/Basic-Information/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Basic Information</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/linear-control-system/">linear-control-system</a> / <a class="has-link-grey -link" href="/categories/linear-control-system/First/">First</a>
                     </p>
@@ -585,20 +602,7 @@ L=\frac{V_{k}-V}{2 \Delta i_{L}} D T_{\mathrm{s}}
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-14T14:20:03.617Z">2019-09-14</time></div>
-                    <a href="/2019/09/14/power-electric/SEPIC-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
-                    <a href="/2019/09/13/power-electric/Buck-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Buck Converter</a>
+                    <a href="/2019/09/14/Power-Electric/SEPIC-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">SEPIC-Converter</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
                     </p>
@@ -611,7 +615,20 @@ L=\frac{V_{k}-V}{2 \Delta i_{L}} D T_{\mathrm{s}}
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
-                    <a href="/2019/09/13/power-electric/Foundation-And-Basic-Concept/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Foundation and Basic Concept</a>
+                    <a href="/2019/09/13/Power-Electric/Buck-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Buck Converter</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/Power-Electric/Foundation-And-Basic-Concept/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Foundation and Basic Concept</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
                     </p>
@@ -637,7 +654,7 @@ L=\frac{V_{k}-V}{2 \Delta i_{L}} D T_{\mathrm{s}}
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T23:13:39.974Z">2019-09-13</time></div>
-                    <a href="/2019/09/13/linear-control-system/1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">linear control system</a>
+                    <a href="/2019/09/13/Linear-Control-System/Basic-Information/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Basic Information</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/linear-control-system/">linear-control-system</a> / <a class="has-link-grey -link" href="/categories/linear-control-system/First/">First</a>
                     </p>
@@ -698,7 +715,7 @@ L=\frac{V_{k}-V}{2 \Delta i_{L}} D T_{\mathrm{s}}
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/jojo.svg" alt="Buck Converter" height="28">
+                    <img src="/images/jojo.svg" alt="Basic Information" height="28">
                 
                 </a>
                 <p class="is-size-7">
