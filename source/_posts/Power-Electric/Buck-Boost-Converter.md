@@ -14,7 +14,7 @@ Another converter, the buck-boost converter, can either increase or decrease the
 
 ### circuit
 
-![Buck-Boost-Converter](./Buck-Boost-Converter/Buck-Boost-Converter.png)
+![](Buck-Boost-Converter.png)
 
 ## why this is a buck-boost converter
 
