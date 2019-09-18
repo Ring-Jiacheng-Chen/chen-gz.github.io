@@ -7,18 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Dog and Cat</title>
+<title>Linear Time-Invariant(LTI) Systems - Dog and Cat</title>
 
 
-    <meta property="og:type" content="article">
-<meta property="og:title" content="Dog and Cat">
+    <meta name="description" content="time invariant A system is said to be time invariant if for every state-input–output pair \[ \left.\begin{array}{l}{\mathbf{x}\left(t_{0}\right)} \\\ {\mathbf{u}(t), t \geq t_{0}}\end{array}\right\} \">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linear Time-Invariant(LTI) Systems">
 <meta property="og:url" content="https://chen-gz.github.io/2019/09/17/Linear-Control-System/Linear-Time-Invariant/index.html">
 <meta property="og:site_name" content="Dog and Cat">
+<meta property="og:description" content="time invariant A system is said to be time invariant if for every state-input–output pair \[ \left.\begin{array}{l}{\mathbf{x}\left(t_{0}\right)} \\\ {\mathbf{u}(t), t \geq t_{0}}\end{array}\right\} \">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://chen-gz.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-09-17T22:50:53.387Z">
+<meta property="og:updated_time" content="2019-09-18T03:35:10.730Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dog and Cat">
+<meta name="twitter:title" content="Linear Time-Invariant(LTI) Systems">
+<meta name="twitter:description" content="time invariant A system is said to be time invariant if for every state-input–output pair \[ \left.\begin{array}{l}{\mathbf{x}\left(t_{0}\right)} \\\ {\mathbf{u}(t), t \geq t_{0}}\end{array}\right\} \">
 <meta name="twitter:image" content="https://chen-gz.github.io/images/og_image.png">
 
 
@@ -86,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/jojo.svg" alt="" height="28">
+                <img src="/images/jojo.svg" alt="Linear Time-Invariant(LTI) Systems" height="28">
             
             </a>
         </div>
@@ -114,6 +117,10 @@
             <div class="navbar-end">
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="Search" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -135,11 +142,15 @@
             <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-09-17T22:33:27.737Z">2019-09-17</time>
                 
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/linear-control-system/">linear control system</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/linear-control-system/Basic/">Basic</a>
+                </div>
+                
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 0 words)
+                    a minute read (About 213 words)
                 </span>
                 
                 
@@ -148,11 +159,21 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                
+                Linear Time-Invariant(LTI) Systems
             
         </h1>
         <div class="content">
-            
+            <p><em>time invariant</em></p>
+<p>A system is said to be time invariant if for every state-input–output pair <span class="math display">\[
+\left.\begin{array}{l}{\mathbf{x}\left(t_{0}\right)} \\\ {\mathbf{u}(t), t \geq t_{0}}\end{array}\right\} \rightarrow \mathbf{y}(t), \quad t \geq t_{0}
+\]</span> and any <span class="math inline">\(T\)</span>, we have <span class="math display">\[
+\left.
+\begin{array}{l}{\mathbf{x}\left(t_{0}+T\right)} \\ {\mathbf{u}(t-T), t \geq t_{0}+T}\end{array}\right\} \rightarrow \mathbf{y}(t-T), t \geq t_{0}+T \quad \text { (time shifting) }
+\]</span> <a id="more"></a></p>
+<p>It means that if the initial state is shifted to time <span class="math inline">\(t_0 + T\)</span> and the same input waveform is applied from <span class="math inline">\(t_0 + T\)</span> instead of from <span class="math inline">\(t_0\)</span> , then the output waveform will be the same except that it starts to appear from time <span class="math inline">\(t_0 + T\)</span> . In other words, if the initial state and the input are the same, no matter at what time they are applied, the output waveform will always be the same. Therefore, for time-invariant systems, we can always assume, without loss of generality, that <span class="math inline">\(t_0 = 0\)</span>. If a system is not time invariant, it is said to be <em>time varying</em>.</p>
+<p>for a linear system causal condition is <span class="math display">\[
+\text { Causal } \Longleftrightarrow g(t, \tau)=0 \text { for } t&lt;\tau
+\]</span> so for LTI system that <span class="math inline">\(g(t) = 0, t&lt;t_0\)</span>.</p>
 
         </div>
         
@@ -178,9 +199,9 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/17/Linear-Control-System/contents/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/17/Linear-Control-System/Contents/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">contents</span>
+                <span class="level-item">Contents</span>
             </a>
         </div>
         
@@ -277,6 +298,17 @@
 </div>
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            
+        </div>
+    </div>
+</div>
+
     
         
 
@@ -304,7 +336,7 @@
                 <span class="level-item">linear control system</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">4</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/linear-control-system/Basic/">
@@ -312,7 +344,7 @@
                 <span class="level-item">Basic</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li></ul></li><li>
         <a class="level is-marginless" href="/categories/power-electric/">
@@ -345,7 +377,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-17T22:43:51.717Z">2019-09-17</time></div>
-                    <a href="/2019/09/17/Linear-Control-System/contents/" class="title has-link-black-ter is-size-6 has-text-weight-normal">contents</a>
+                    <a href="/2019/09/17/Linear-Control-System/Contents/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Contents</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/linear-control-system/">linear control system</a>
                     </p>
@@ -358,9 +390,9 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-17T22:33:27.737Z">2019-09-17</time></div>
-                    <a href="/2019/09/17/Linear-Control-System/Linear-Time-Invariant/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
+                    <a href="/2019/09/17/Linear-Control-System/Linear-Time-Invariant/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Linear Time-Invariant(LTI) Systems</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/linear-control-system/">linear control system</a> / <a class="has-link-grey -link" href="/categories/linear-control-system/Basic/">Basic</a>
                     </p>
                 </div>
             </div>
@@ -469,7 +501,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-17T22:43:51.717Z">2019-09-17</time></div>
-                    <a href="/2019/09/17/Linear-Control-System/contents/" class="title has-link-black-ter is-size-6 has-text-weight-normal">contents</a>
+                    <a href="/2019/09/17/Linear-Control-System/Contents/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Contents</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/linear-control-system/">linear control system</a>
                     </p>
@@ -482,9 +514,9 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-17T22:33:27.737Z">2019-09-17</time></div>
-                    <a href="/2019/09/17/Linear-Control-System/Linear-Time-Invariant/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
+                    <a href="/2019/09/17/Linear-Control-System/Linear-Time-Invariant/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Linear Time-Invariant(LTI) Systems</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/linear-control-system/">linear control system</a> / <a class="has-link-grey -link" href="/categories/linear-control-system/Basic/">Basic</a>
                     </p>
                 </div>
             </div>
@@ -582,7 +614,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/jojo.svg" alt="" height="28">
+                    <img src="/images/jojo.svg" alt="Linear Time-Invariant(LTI) Systems" height="28">
                 
                 </a>
                 <p class="is-size-7">
