@@ -1,27 +1,31 @@
 ---
 title: Basic Information
 categories: 
-- linear-control-system
-- First
+- linear control system
+- Basic
 toc: true
 ---
 
 ## Basic Information
 
-The systems to be studied in this text are limited to linear systems. Using the concept of linearity, we develop in Chapter 2 that every linear system can be described by
+The systems to be studied in this categories are limited to linear systems. Using the concept of linearity, that every linear system can be described by
 $$
 \mathbf{y}(t)=\int_{t_{0}}^{t} \mathbf{G}(t, \tau) \mathbf{u}(\tau) d \tau
 $$
 <!--more-->
 This equation describes the relationship between the input u and output y and is called the input–output or external description. If a linear system is lumped as well, then it can also be described by
 $$
-\begin{aligned}
-\dot{\mathbf{x}}(t) &=\mathbf{A}(t) \mathbf{x}(t)+\mathbf{B}(t) \mathbf{u}(t) \\ \mathbf{y}(t) &=\mathbf{C}(t) \mathbf{x}(t)+\mathbf{D}(t) \mathbf{u}(t) 
-\end{aligned}
+\dot{\mathbf{x}}(t) =\mathbf{A}(t) \mathbf{x}(t)+\mathbf{B}(t) \mathbf{u}(t)
 $$
-$Equation (1.2)$ is a set of ﬁrst-order differential equations and $Equation (1.3)$ is a set of algebraic equations. They are called the internal description of linear systems. Because the vector x is called the state, the set of two equations is called the state-space or, simply, the state equation.
 
-If a linear system has, in addition, the property of time invariance, then $Equations (1.1)$ through $(1.3)$ reduce to
+$$
+\mathbf{y}(t) =\mathbf{C}(t) \mathbf{x}(t)+\mathbf{D}(t) \mathbf{u}(t) 
+$$
+$Equation (2)$ is a set of ﬁrst-order differential equations and $Equation (3)$ is a set of algebraic equations. 
+
+They are called the internal description of linear systems. Because the vector $x$ is called the state, the set of two equations, $equation (2)$ and $equation (3)$, is called the state-space or, simply, the state equation.
+
+If a linear system has, in addition, the property of time invariance, then $Equations (1)$ through $(3)$ reduce to
 $$
 \mathbf{y}(t)=\int_{0}^{t} \mathbf{G}(t-\tau) \mathbf{u}(\tau) d \tau
 $$
@@ -34,10 +38,10 @@ For this class of linear time-invariant systems, the Laplace transform is an imp
 $$
 \hat{\mathbf{y}}(s)=\hat{\mathbf{G}}(s) \hat{\mathbf{u}}(s)
 $$
-where a variable with a circumﬂex denotes the Laplace transform of the variable. The function $\hat{G}(s)$ is called the *transfer matrix*. Both $(1.4)$ and $(1.7)$ are input–output or external descriptions. The former is said to be in the time domain and the latter in the frequency domain. $Equations (1.1)$ through $(1.6)$ are called continuous-time equations because their time
+where a variable with a circumﬂex denotes the Laplace transform of the variable. The function $\hat{G}(s)$ is called the *transfer matrix*. Both $(4)$ and $(6)$ are input–output or external descriptions. The former is said to be in the time domain and the latter in the frequency domain. 
 
 
-## defines 
+## Categories
 *SISO*
 
 A system with only one input terminal and only one output terminal is called a single-variable system or a single-input single-output (SISO) system.
@@ -75,21 +79,19 @@ $$
 \left. \begin{array}{l}{\mathbf{x}\left(t_{0}\right)} \\ {\mathbf{u}(t), t \geq t_{0}}\end{array} \right\} \rightarrow \mathbf{y}(t), \quad t \geq t_{0}
 $$
 
-It means that the output is partly excited by the initial state at t 0 and partly by the input applied at and after t 0 . In using (2.1), there is no more need to know the input applied before t 0 all the way back to −∞. Thus (2.1) is easier to track and will be called a state-input–output pair. A system is said to be lumped if its number of state variables is ﬁnite or its state is a
+It means that the output is partly excited by the initial state at $t_0$ and partly by the input applied at and after $t_0$ . In using $definition(2.1)$, there is no more need to know the input applied before $t_0$  all the way back to $\infin$. Thus  $definition(2.1)$ is easier to track and will be called a state-input–output pair. 
 
 *lumped* 
 
-A system is said to be lumped if its number of state variables is ﬁnite or its state is a ﬁnite vector. The network in Fig. 2.2 is clearly a lumped system; its state consists of three numbers. 
+A system is said to be lumped if its number of state variables is ﬁnite or its state is a ﬁnite vector. 
 
 *distributed*
 
 A system is called a distributed system if its state has inﬁnitely many state variables. The transmission line is the most well known distributed system.
 
 *linear system*
-*additivity, homogeneity and superpositition*
-Systems
-A system is called a linear system if for every t_0 and any two state-input–output pairs
-
+additivity, homogeneity and superposition
+A system is called a linear system if for every $t_0$ and any two state-input–output pairs
 $$
 \left.
 \begin{array}{l}{\mathbf{x}\left(t_{0}\right)} \\ {\mathbf{u}(t), t \geq t_{0}}\end{array}\right\} \rightarrow \mathbf{y}(t), \quad t \geq t_{0}
@@ -109,7 +111,9 @@ $$
 \left.
 \begin{array}{l}{\alpha_{1} \mathbf{x}_{1}\left(t_{0}\right)+\alpha_{2} \mathbf{x}_{2}\left(t_{0}\right)} \\ {\alpha_{1} \mathbf{u}_{1}(t)+\alpha_{2} \mathbf{u}_{2}(t), \quad t \geq t_{0}}\end{array} \right \} \rightarrow \alpha_{1} \mathbf{y}_{1}(t)+\alpha_{2} \mathbf{y}_{2}(t), \quad t \geq t_{0}
 $$
-for any real constants $\alpha_1$ and $\alpha_2$, and is called the superposition property. A system is called a nonlinear system if the superposition property does not hold.
+for any real constants $\alpha_1$ and $\alpha_2$, and is called the superposition property. 
+
+A system is called a nonlinear system if the superposition property does not hold.
 
 *zero input response*
 
@@ -126,72 +130,5 @@ $$
 \left.
 \begin{array}{rl}{\mathbf{x}\left(t_{0}\right)=}  {\mathbf{0}} \\ {\mathbf{u}(t),} 4 {t \geq t_{0}}\end{array}\right\} \rightarrow \mathbf{y}_{z s}(t), \quad t \geq t_{0}
 $$
-
-## input-output description
-Consequently, the input u(t) can be expressed symbolically as
-$$
-u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \Delta
-$$
-
-Let $g_{\Delta}\left(t, t_{i}\right)$ be the output at time $t$ excited by the pulse $u(t)=\delta_{\Delta}\left(t-t_{i}\right)$ applied at time $t_{i}$. Then we have
-
-$$
-\begin{aligned} \delta_{\Delta}\left(t-t_{i}\right) & \rightarrow g_{\Delta}\left(t, t_{i}\right) \\
-\delta_{\Delta}\left(t-t_{i}\right) u\left(t_{i}\right) \Delta & \rightarrow g_{\Delta}\left(t, t_{i}\right) u\left(t_{i}\right) \Delta \quad \text { (homogeneity) } \\
-\sum_{i} \delta_{\Delta}\left(t-t_{i}\right) u\left(t_{i}\right) \Delta & \rightarrow \sum_{i} g_{\Delta}\left(t, t_{i}\right) u\left(t_{i}\right) \Delta \quad \text { (additivity) } \end{aligned}
-$$
-Thus the output $y(t)$ excited by the input $u(t)$ can be approximated by
-$$
-y(t) \approx \sum_{i} g_{\Delta}\left(t, t_{i}\right) u\left(t_{i}\right) \Delta
-$$
-
-Now if $\Delta$ approaches zero, the pulse $\delta_{\Delta}\left(t-t_{i}\right)$ becomes an impulse at $t_{i},$ denoted by $\delta\left(t-t_{i}\right),$ and the corresponding output will be denoted by $g\left(t, t_{i}\right) .$ As $\Delta$ approaches zero, the approximation in $(2.2)$ becomes an equality, the summation becomes an integration, the discrete $t_{i}$ becomes a continuum and can be replaced by $\tau,$ and $\Delta$ can be written as $d \tau .$ Thus $(2.2)$ becomes
-
-$$
-y(t)=\int_{-\infty}^{\infty} g(t, \tau) u(\tau) d \tau
-$$
-Note that $g(t, \tau)$ is a function of two variables. The second variable denotes the time at which the impulse input is applied; the ﬁrst variable denotes the time at which the output is observed. Because $g(t,\tau)$ is the response excited by an impulse, it is called the impulse response. If a system is causal, the output will not appear before an input is applied. Thus we have
-$$
-\text { Causal } \Longleftrightarrow g(t, \tau)=0 \text { for } t<\tau
-$$
-
-*relax* 
-
-A system is said to be relaxed at $t_0$ if its initial state at $t_0$ is 0. In this case, the output $y(t)$, for $t ≥ t_0$ , is excited exclusively by the input $u(t)$ for $t \geq 0$.
-
-In conclusion, every linear system that is causal and relaxed at $t_0$ can be described by
-$$
-\mathbf{G}(t, \tau)=\left[\begin{array}{cccc}{g_{11}(t, \tau)} & {g_{12}(t, \tau)} & {\cdots} & {g_{1 p}(t, \tau)} \\\ {g_{21}(t, \tau)} & {g_{22}(t, \tau)} & {\cdots} & {g_{2 p}(t, \tau)} \\\ {\vdots} & {\vdots} & {} & {\vdots} \\\ {g_{q 1}(t, \tau)} & {g_{q 2}(t, \tau)} & {\cdots} & {g_{q p}(t, \tau)}\end{array}\right]
-$$
-where 
-$$
-\mathbf{y}(t)=\int_{t_{0}}^{t} \mathbf{G}(t, \tau) \mathbf{u}(\tau) d \tau
-$$
-and $g_{ij}(t,\tau)$ is the response at time $t$ at the $i$th output terminal due to an impulse applied at time $\tau$ at the $j$ th input terminal, the inputs at other terminals being identically zero. 
-
-That is, $g_i{ij}(t, \tau )$ is the impulse response between the $j$ th input terminal and the ith output terminal. Thus G is called the *impulse response matrix* of the system. 
-
-## Linear Time-Invariant(LTI) Systems
-
-*time invariant* 
-
-A system is said to be time invariant if for every state-input–output pair
-
-$$
-\left.
-\begin{array}{l}{\mathbf{x}\left(t_{0}\right)} \\\ {\mathbf{u}(t), t \geq t_{0}}\end{array}\right\} \rightarrow \mathbf{y}(t), \quad t \geq t_{0}
-$$
-and any $T$, we have
-$$
-\left.
-\begin{array}{l}{\mathbf{x}\left(t_{0}+T\right)} \\ {\mathbf{u}(t-T), t \geq t_{0}+T}\end{array}\right\} \rightarrow \mathbf{y}(t-T), t \geq t_{0}+T \quad \text { (time shifting) }
-$$
-
-It means that if the initial state is shifted to time $t_0 + T$ and the same input waveform is applied from $t_0 + T$ instead of from $t_0$ , then the output waveform will be the same except that it starts to appear from time $t_0 + T$ . In other words, if the initial state and the input are the same, no
-matter at what time they are applied, the output waveform will always be the same. Therefore, for time-invariant systems, we can always assume, without loss of generality, that $t_0 = 0$. If a system is not time invariant, it is said to be *time varying*.
-
-this also means $g(t) = 0, t<t_0$
-
-Here need to add some comment. When I have time.
 
 

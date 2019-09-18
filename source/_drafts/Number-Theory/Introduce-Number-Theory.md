@@ -16,3 +16,16 @@ In this passage will introduce some interest and basic information about number 
 
 prime number A **prime number** (or a **prime**) is a [natural number](https://en.wikipedia.org/wiki/Natural_number) greater than 1 that cannot be formed by multiplying two smaller natural numbers[from wikipedia].   
 
+Such as 2,3,5,7,11,13,17 is prime number.  Almost all problem of number theory is about prime number.
+
+Goldbach conjecture and most famous unsolved problem. We call............... twin prime like 3,5 or 11,13.
+
+We wander to know if the prime is very large, does there exist twin prime and the frequency of twin number. 
+
+there all very interesting things.
+
+### Greatest Common Divisor
+
+###   
+
+ 
