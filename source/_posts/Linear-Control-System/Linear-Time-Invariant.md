@@ -1,11 +1,10 @@
 ---
-title: Linear Time-Invariant(LTI) system
+title: Linear Time-Invariant(LTI) Systems
 categories: 
 - linear control system
 - Basic
 toc: true
 ---
-## Linear Time-Invariant(LTI) Systems
 
 *time invariant* 
 

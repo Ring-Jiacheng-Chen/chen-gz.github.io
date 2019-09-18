@@ -6,7 +6,7 @@ categories:
 toc: true
 ---
 
-## Basic Information
+
 
 The systems to be studied in this categories are limited to linear systems. Using the concept of linearity, that every linear system can be described by
 $$

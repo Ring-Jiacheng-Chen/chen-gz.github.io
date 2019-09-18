@@ -5,7 +5,7 @@ categories:
 - Basic
 toc: true
 ---
-## input-output description
+
 
 Consequently, the input u(t) can be expressed symbolically as
 $$
