@@ -1,5 +1,5 @@
 ---
-ytitle: Probability Functions 
+title: Probability Functions 
 category: Probability Density Function
 toc: true
 ---

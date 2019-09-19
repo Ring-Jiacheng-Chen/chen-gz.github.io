@@ -1,5 +1,5 @@
 ---
-ytitle: Probability Functions 
+title: Type of Random Variable
 category: Probability Density Function
 toc: true
 ---
