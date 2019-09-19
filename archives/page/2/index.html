@@ -7,21 +7,17 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Foundation and Basic Concept - Dog and Cat</title>
+<title>Archives - Dog and Cat</title>
 
 
-    <meta name="description" content="note: most things are copied from book, not write by myself and this book can get from Google. I only copy important things to here and add some comments. symbols Duty cycle: D single pole double thro">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Foundation and Basic Concept">
-<meta property="og:url" content="https://chen-gz.github.io/2019/09/13/Power-Electric/Foundation-And-Basic-Concept/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Dog and Cat">
+<meta property="og:url" content="https://chen-gz.github.io/archives/page/2/index.html">
 <meta property="og:site_name" content="Dog and Cat">
-<meta property="og:description" content="note: most things are copied from book, not write by myself and this book can get from Google. I only copy important things to here and add some comments. symbols Duty cycle: D single pole double thro">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://chen-gz.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-09-16T04:20:17.727Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Foundation and Basic Concept">
-<meta name="twitter:description" content="note: most things are copied from book, not write by myself and this book can get from Google. I only copy important things to here and add some comments. symbols Duty cycle: D single pole double thro">
+<meta name="twitter:title" content="Dog and Cat">
 <meta name="twitter:image" content="https://chen-gz.github.io/images/og_image.png">
 
 
@@ -89,7 +85,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/jojo.svg" alt="Foundation and Basic Concept" height="28">
+                <img src="/images/jojo.svg" alt="Dog and Cat" height="28">
             
             </a>
         </div>
@@ -117,10 +113,6 @@
             <div class="navbar-end">
                 
                 
-                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
-                    <i class="fas fa-list-ul"></i>
-                </a>
-                
                 
                 <a class="navbar-item search" title="Search" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -134,122 +126,77 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    
-    <div class="card-content article ">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
         
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4 minutes read (About 621 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                Foundation and Basic Concept
-            
-        </h1>
-        <div class="content">
-            <p><em>note: most things are copied from book, not write by myself and this book can get from Google. I only copy important things to here and add some comments.</em></p>
-<h2 id="symbols">symbols</h2>
-<p>Duty cycle: <em>D</em></p>
-<p>single pole double throw: <em>SPDT</em>.</p>
-<p>output voltage <span class="math inline">\(v_{s}(t)\)</span>.</p>
-<p>converter input voltage <span class="math inline">\(V_{g}\)</span>.</p>
-<p>The complement of the duty ratio, <span class="math inline">\(D^{\prime},\)</span> is defined as <span class="math inline">\((1-D)\)</span>. <a id="more"></a></p>
-<h2 id="dc-component-of-v_st">DC component of <span class="math inline">\(v_s(t)\)</span>:</h2>
-<p>From Fourier analysis, we know that the DC component of <span class="math inline">\(v_{s}(t)\)</span> is given by its average value <span class="math inline">\(\left\langle v_{s}\right\rangle,\)</span> or <span class="math display">\[
-\left\langle v_{s}\right\rangle=\frac{1}{T_{s}} \int_{0}^{T_{s}} v_{s}(t) d t
-\]</span> ## position of inductor</p>
-<p>The buck converter is just one of many possible switching converters. Two other commonly used converters, which perform different voltage conversion functions, are illustrated in Fig. <span class="math inline">\(2.5 .\)</span> In the boost converter, the positions of the inductor and switch are reversed.</p>
-<h2 id="balance-rule-for-inductor-voltage-and-capacitor-current">balance rule for inductor voltage and capacitor current</h2>
-<p>The principles of inductor volt-second balance and capacitor charge balance are derived; these can be used to solve for the inductor currents and capacitor voltages of switching converters.</p>
-<h2 id="small-ripple-and-linear-ripple-approximation">small-ripple and linear-ripple approximation</h2>
-<p><img src="https://cdn.mathpix.com/snip/images/UtGYcs5WNOTFcynd9FcgumtN21f0WcJOTF5930TkFKg.original.fullsize.png"></p>
-<p>So it is nearly always a good approximation to assume that the magnitude of the switching ripple is much smaller than the DC component: <span class="math display">\[
-\left|v_{\text {ripple}}\right|&lt;V
-\]</span> Therefore, the output voltage <span class="math inline">\(v(t)\)</span> is well approximated by its DC component <span class="math inline">\(V,\)</span> with the small ripple term <span class="math inline">\(v_{ripple}(t)\)</span> neglected: <span class="math display">\[
-v(t) \approx V
-\]</span> ## inductor voltage and conductor current</p>
-<h3 id="inductor-voltage">inductor voltage</h3>
-<p>The inductor voltage can be found by use of the definition <span class="math display">\[
-v_{L}(t)=L \frac{d i_{L}(t)}{d t}
-\]</span></p>
-<h3 id="capacitor-current">Capacitor current</h3>
-<p><span class="math display">\[
-i_c(t) = C \frac{du_c(t)}{dt}
-\]</span></p>
-<h2 id="the-balance-of-inductor-and-capacitor">The balance of inductor and capacitor</h2>
-<h3 id="inductor-voltage-balance">Inductor voltage balance</h3>
-<p>the principle of inductor volt-second balance. Given the defining relation of an inductor: <span class="math display">\[
-v_{L}(t)=L \frac{d i_{L}(t)}{d t}
-\]</span> Integration over one complete switching period, say from <span class="math inline">\(t=0\)</span> to <span class="math inline">\(T_{s}\)</span> , yields <span class="math display">\[
-i_{L}\left(T_{s}\right)-i_{L}(0)=\frac{1}{L} \int_{0}^{T_{s}} v_{L}(t) d t
-\]</span> Therefore, in steady state the integral of the applied inductor voltage must be zero: <span class="math display">\[
-0=\int_{0}^{T_{s}} v_{L}(t) d t
-\]</span> ### Capacitor current balance</p>
-<p>Similar arguments can be applied to capacitors. The defining equation of a capacitor is <span class="math display">\[
-i_{C}(t)=C \frac{d v_{C}(t)}{d t}
-\]</span> Integration of this equation over one switching period yields <span class="math display">\[
-v_{C}\left(T_{s}\right)-v_{C}(0)=\frac{1}{C} \int_{0}^{T_{s}} i_{C}(t) d t
-\]</span></p>
-<p>In steady state, the net change over one switching period of the capacitor voltage must be zero, so that the left-hand side of <span class="math inline">\(Eq. (2.26)\)</span> is equal to zero. Therefore, in equilibrium the integral of the capacitor current over one switching period (having the dimensions of amp-seconds, or charge) should be zero. There is no net change in capacitor charge in steady state. An equivalent statement is This should be an intuitive result. If a DC current is applied to a capacitor, then the <span class="math display">\[
-0=\frac{1}{T_{s}} \int_{0}^{T_{s}} i_{c}(t) d t=\left\langle i_{c}\right\rangle
-\]</span> The average value, or DC component, of the capacitor current must be zero in equilibrium.</p>
-<h2 id="continue-conduction-mode">continue conduction mode</h2>
-<p>current must over zero, if not satisfied continue conduction mode, then when switch to status 2, two component will off!</p>
-<p>from continue conduction mode we can define <span class="math inline">\(L_{min}\)</span> to satisfy continue conduction mode.</p>
-<h2 id="md-of-various-converter">M(D) of various converter</h2>
-<p><img src="https://cdn.mathpix.com/snip/images/eTfq0ninHSJSxUEnWNIkg5oEzPDzXGm8Kqjpk1MTh78.original.fullsize.png"></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-<div class="card">
+<div class="card widget">
     <div class="card-content">
-        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
-        <div class="buttons is-centered">
-            
+        <h3 class="tag is-link">
+        2019
+        </h3>
+        <div class="timeline">
+        
+            <article class="media">
+                
+                <div class="media-content">
+                    <div class="content">
+                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-09-14T14:20:03.617Z">2019-09-14</time>
+                        <a href="/2019/09/14/Power-Electric/SEPIC-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">SEPIC-Converter</a>
+                        <div class="level article-meta is-mobile">
+                            <div class="level-left">
+                                
+                                <div class="level-item is-size-7 is-uppercase">
+                                <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        
+            <article class="media">
+                
+                <div class="media-content">
+                    <div class="content">
+                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-09-13T23:37:03.477Z">2019-09-13</time>
+                        <a href="/2019/09/13/Power-Electric/Buck-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Buck Converter</a>
+                        <div class="level article-meta is-mobile">
+                            <div class="level-left">
+                                
+                                <div class="level-item is-size-7 is-uppercase">
+                                <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        
         </div>
     </div>
 </div>
 
+    
 
-
+    
 <div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/13/Power-Electric/Buck-Converter/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Buck Converter</span>
-            </a>
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <div class="pagination-previous">
+            <a class="is-flex-grow has-text-black-ter" href="/archives/">Previous</a>
         </div>
-        
-        
-    </div>
+        <div class="pagination-next is-invisible is-hidden-mobile">
+            <a class="is-flex-grow has-text-black-ter" href="/archives/page/3/">Next</a>
+        </div>
+        <ul class="pagination-list is-hidden-mobile">
+            
+            <li><a class="pagination-link has-text-black-ter" href="/archives/">1</a></li>
+            
+            <li><a class="pagination-link is-current" href="/archives/page/2/">2</a></li>
+            
+        </ul>
+    </nav>
 </div>
-
-
 </div>
                 
 
@@ -285,7 +232,7 @@ v_{C}\left(T_{s}\right)-v_{C}(0)=\frac{1}{C} \int_{0}^{T_{s}} i_{C}(t) d t
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        9
+                        12
                     </p>
                 </div>
             </div>
@@ -295,7 +242,7 @@ v_{C}\left(T_{s}\right)-v_{C}(0)=\frac{1}{C} \int_{0}^{T_{s}} i_{C}(t) d t
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        4
+                        5
                     </p>
                 </div>
             </div>
@@ -331,57 +278,6 @@ v_{C}\left(T_{s}\right)-v_{C}(0)=\frac{1}{C} \int_{0}^{T_{s}} i_{C}(t) d t
 </div>
     
         
-<div class="card widget" id="toc">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                Catalogue
-            </h3>
-            <ul class="menu-list"><li>
-        <a class="is-flex" href="#symbols">
-        <span class="has-mr-6">1</span>
-        <span>symbols</span>
-        </a></li><li>
-        <a class="is-flex" href="#dc-component-of-v_st">
-        <span class="has-mr-6">2</span>
-        <span>DC component of \(v_s(t)\):</span>
-        </a></li><li>
-        <a class="is-flex" href="#balance-rule-for-inductor-voltage-and-capacitor-current">
-        <span class="has-mr-6">3</span>
-        <span>balance rule for inductor voltage and capacitor current</span>
-        </a></li><li>
-        <a class="is-flex" href="#small-ripple-and-linear-ripple-approximation">
-        <span class="has-mr-6">4</span>
-        <span>small-ripple and linear-ripple approximation</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#inductor-voltage">
-        <span class="has-mr-6">4.1</span>
-        <span>inductor voltage</span>
-        </a></li><li>
-        <a class="is-flex" href="#capacitor-current">
-        <span class="has-mr-6">4.2</span>
-        <span>Capacitor current</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#the-balance-of-inductor-and-capacitor">
-        <span class="has-mr-6">5</span>
-        <span>The balance of inductor and capacitor</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#inductor-voltage-balance">
-        <span class="has-mr-6">5.1</span>
-        <span>Inductor voltage balance</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#continue-conduction-mode">
-        <span class="has-mr-6">6</span>
-        <span>continue conduction mode</span>
-        </a></li><li>
-        <a class="is-flex" href="#md-of-various-converter">
-        <span class="has-mr-6">7</span>
-        <span>M(D) of various converter</span>
-        </a></li></ul>
-        </div>
-    </div>
-</div>
-
     
         
 
@@ -396,6 +292,14 @@ v_{C}\left(T_{s}\right)-v_{C}(0)=\frac{1}{C} \int_{0}^{T_{s}} i_{C}(t) d t
             </h3>
             <ul class="menu-list">
             <li>
+        <a class="level is-marginless" href="/categories/Probability-Density-Function/">
+            <span class="level-start">
+                <span class="level-item">Probability Density Function</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/Probability-and-Random-Processes/">
             <span class="level-start">
                 <span class="level-item">Probability and Random Processes</span>
@@ -449,6 +353,45 @@ v_{C}\left(T_{s}\right)-v_{C}(0)=\frac{1}{C} \int_{0}^{T_{s}} i_{C}(t) d t
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-18T23:39:47.840Z">2019-09-18</time></div>
+                    <a href="/2019/09/18/Probability-and-Random-Processes/Type-of-Random-Variable/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Probability-Density-Function/">Probability Density Function</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-18T22:20:02.187Z">2019-09-18</time></div>
+                    <a href="/2019/09/18/Probability-and-Random-Processes/Conditional-Probability/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Probability Properties</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Probability-Density-Function/">Probability Density Function</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-18T22:10:53.837Z">2019-09-18</time></div>
+                    <a href="/2019/09/18/Probability-and-Random-Processes/Probability-Density-Function/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Probability-Density-Function/">Probability Density Function</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-17T22:43:51.717Z">2019-09-17</time></div>
                     <a href="/2019/09/17/Linear-Control-System/Contents/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Contents</a>
                     <p class="is-size-7 is-uppercase">
@@ -466,45 +409,6 @@ v_{C}\left(T_{s}\right)-v_{C}(0)=\frac{1}{C} \int_{0}^{T_{s}} i_{C}(t) d t
                     <a href="/2019/09/17/Linear-Control-System/Linear-Time-Invariant/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Linear Time-Invariant(LTI) Systems</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/linear-control-system/">linear control system</a> / <a class="has-link-grey -link" href="/categories/linear-control-system/Basic/">Basic</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-17T22:24:13.627Z">2019-09-17</time></div>
-                    <a href="/2019/09/17/Linear-Control-System/Input-Output-Description/" class="title has-link-black-ter is-size-6 has-text-weight-normal">input-output description</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/linear-control-system/">linear control system</a> / <a class="has-link-grey -link" href="/categories/linear-control-system/Basic/">Basic</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-17T00:31:16.953Z">2019-09-16</time></div>
-                    <a href="/2019/09/16/Linear-Control-System/Basic-Information/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Basic Information</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/linear-control-system/">linear control system</a> / <a class="has-link-grey -link" href="/categories/linear-control-system/Basic/">Basic</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-17T00:31:16.953Z">2019-09-16</time></div>
-                    <a href="/2019/09/16/Power-Electric/Buck-Boost-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Buck Boost Converter</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
                     </p>
                 </div>
             </div>
@@ -528,7 +432,7 @@ v_{C}\left(T_{s}\right)-v_{C}(0)=\frac{1}{C} \int_{0}^{T_{s}} i_{C}(t) d t
                     <span class="level-item">September 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">9</span>
+                    <span class="level-item tag">12</span>
                 </span>
             </a>
         </li>
@@ -573,6 +477,45 @@ v_{C}\left(T_{s}\right)-v_{C}(0)=\frac{1}{C} \int_{0}^{T_{s}} i_{C}(t) d t
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-18T23:39:47.840Z">2019-09-18</time></div>
+                    <a href="/2019/09/18/Probability-and-Random-Processes/Type-of-Random-Variable/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Probability-Density-Function/">Probability Density Function</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-18T22:20:02.187Z">2019-09-18</time></div>
+                    <a href="/2019/09/18/Probability-and-Random-Processes/Conditional-Probability/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Probability Properties</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Probability-Density-Function/">Probability Density Function</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-18T22:10:53.837Z">2019-09-18</time></div>
+                    <a href="/2019/09/18/Probability-and-Random-Processes/Probability-Density-Function/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Probability-Density-Function/">Probability Density Function</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-17T22:43:51.717Z">2019-09-17</time></div>
                     <a href="/2019/09/17/Linear-Control-System/Contents/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Contents</a>
                     <p class="is-size-7 is-uppercase">
@@ -590,45 +533,6 @@ v_{C}\left(T_{s}\right)-v_{C}(0)=\frac{1}{C} \int_{0}^{T_{s}} i_{C}(t) d t
                     <a href="/2019/09/17/Linear-Control-System/Linear-Time-Invariant/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Linear Time-Invariant(LTI) Systems</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/linear-control-system/">linear control system</a> / <a class="has-link-grey -link" href="/categories/linear-control-system/Basic/">Basic</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-17T22:24:13.627Z">2019-09-17</time></div>
-                    <a href="/2019/09/17/Linear-Control-System/Input-Output-Description/" class="title has-link-black-ter is-size-6 has-text-weight-normal">input-output description</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/linear-control-system/">linear control system</a> / <a class="has-link-grey -link" href="/categories/linear-control-system/Basic/">Basic</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-17T00:31:16.953Z">2019-09-16</time></div>
-                    <a href="/2019/09/16/Linear-Control-System/Basic-Information/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Basic Information</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/linear-control-system/">linear control system</a> / <a class="has-link-grey -link" href="/categories/linear-control-system/Basic/">Basic</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-17T00:31:16.953Z">2019-09-16</time></div>
-                    <a href="/2019/09/16/Power-Electric/Buck-Boost-Converter/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Buck Boost Converter</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/power-electric/">power electric</a>
                     </p>
                 </div>
             </div>
@@ -652,7 +556,7 @@ v_{C}\left(T_{s}\right)-v_{C}(0)=\frac{1}{C} \int_{0}^{T_{s}} i_{C}(t) d t
                     <span class="level-item">September 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">9</span>
+                    <span class="level-item tag">12</span>
                 </span>
             </a>
         </li>
@@ -687,7 +591,7 @@ v_{C}\left(T_{s}\right)-v_{C}(0)=\frac{1}{C} \int_{0}^{T_{s}} i_{C}(t) d t
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/jojo.svg" alt="Foundation and Basic Concept" height="28">
+                    <img src="/images/jojo.svg" alt="Dog and Cat" height="28">
                 
                 </a>
                 <p class="is-size-7">
