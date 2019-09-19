@@ -1,10 +1,8 @@
 ---
-title: Probability and Random Processes
+title: Basic Information
 category: Probability and Random Processes
 toc: true
 ---
-
-## everything is copied from book
 
 *The Sample Space*
 
@@ -27,4 +25,5 @@ Events correspond to susbsets of S(sample space).
 correspond to subsets of S.Two events of special interest are the certain event, S, which consists of all outcomes and hence always occurs, and the impossible or null event, $\emptyset$, which contains no outcomes and hence never occurs.
 
 An event from a discrete sample space that consists of a single outcome is called an *elementary event*.
+
 
