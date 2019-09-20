@@ -18,7 +18,7 @@
 <meta property="og:description" content="preface In the past hundred years, people thing number theory is the queen of math(math is the queen of science). we find it very interesting. In the number theory we can find many many amazing things">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://chen-gz.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-09-20T18:57:54.824Z">
+<meta property="og:updated_time" content="2019-09-20T19:49:56.137Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="basic number theory">
 <meta name="twitter:description" content="preface In the past hundred years, people thing number theory is the queen of math(math is the queen of science). we find it very interesting. In the number theory we can find many many amazing things">
@@ -150,7 +150,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 minutes read (About 499 words)
+                    a minute read (About 220 words)
                 </span>
                 
                 
@@ -173,24 +173,6 @@
 <p>Goldbach conjecture and most famous unsolved problem. We call............... twin prime like 3,5 or 11,13.</p>
 <p>We wander to know if the prime is very large, does there exist twin prime and the frequency of twin number.</p>
 <p>there all very interesting things.</p>
-<h2 id="greatest-common-divisorgcd">Greatest Common Divisor(GCD)</h2>
-<p>Here is another passage about <strong>GCD</strong>. That passage most consider GCD in algorithm, but here we will give prove.</p>
-<p>Common Divisor mean if <span class="math inline">\(a|b\)</span> and <span class="math inline">\(a|c\)</span> then <span class="math inline">\(a\)</span> is common divisor of <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span>.</p>
-<p>Greatest Common Divisor is the <em>Greatest</em> one of all common divisor of <span class="math inline">\(b,c\)</span>.</p>
-<p>For example, 12 and 8 have two common divisor, 2 and 4.</p>
-<p>To find out greatest common divisor is one of basic question in number theory.</p>
-<p>It look like easy for small numbers but we need to find a way to calculate the greatest common divisor as quickly as possible.</p>
-<p>if a|b then can <span class="math inline">\(a,b\)</span> have relationship expressed by <span class="math inline">\(a = bx + r\)</span>.</p>
-<p>Thus the great commont divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is equal to the great commont divisor of <span class="math inline">\(bx+r\)</span> and <span class="math inline">\(b\)</span>. Notice that <span class="math inline">\(b\)</span> dived by <span class="math inline">\(bx\)</span>. So great commont divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> equap great common divisor of <span class="math inline">\(b\)</span> and <span class="math inline">\(r\)</span>.</p>
-<p>explain more if <span class="math inline">\(c\)</span> is the great common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, then <span class="math inline">\(c|bx +r\)</span>. Because of <span class="math inline">\(c|b\)</span> thus c|bx$. we have <span class="math inline">\(c|bx+r\)</span> so c must divided by c.</p>
-<p>Here is a most important equation in this section</p>
-<p><span class="math display">\[
-gcd(a,b) = gcd(a mod b,b)
-\]</span> considered some times <span class="math inline">\(x\)</span> may be zero means b bigger than a. So when write a computer program using recursion skill we need change the position of a$ and <span class="math inline">\(b\)</span>. Rewrite the equation in order to use in computer program.</p>
-<p><span class="math display">\[ 
-gcd(a,b) = gcd(b,a mod b)
-\]</span></p>
-<p><span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are(is) co-prime if we find out that the greatest common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is 1.</p>
 
         </div>
         
@@ -214,6 +196,13 @@ gcd(a,b) = gcd(b,a mod b)
 
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/20/Number-Theory/Greatest-Common-Divisor/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Greatest Common Divisor</span>
+            </a>
+        </div>
         
         
         <div class="level-end">
@@ -277,7 +266,7 @@ gcd(a,b) = gcd(b,a mod b)
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        14
+                        15
                     </p>
                 </div>
             </div>
@@ -337,10 +326,6 @@ gcd(a,b) = gcd(b,a mod b)
         <a class="is-flex" href="#prime-number">
         <span class="has-mr-6">2</span>
         <span>prime number</span>
-        </a></li><li>
-        <a class="is-flex" href="#greatest-common-divisorgcd">
-        <span class="has-mr-6">3</span>
-        <span>Greatest Common Divisor(GCD)</span>
         </a></li></ul>
         </div>
     </div>
@@ -397,7 +382,7 @@ gcd(a,b) = gcd(b,a mod b)
                 <span class="level-item">number theory</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/power-electric/">
@@ -424,6 +409,19 @@ gcd(a,b) = gcd(b,a mod b)
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-20T19:49:29.197Z">2019-09-20</time></div>
+                    <a href="/2019/09/20/Number-Theory/Greatest-Common-Divisor/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Greatest Common Divisor</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/number-theory/">number theory</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -477,19 +475,6 @@ gcd(a,b) = gcd(b,a mod b)
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-18T22:10:53.837Z">2019-09-18</time></div>
-                    <a href="/2019/09/18/Probability-and-Random-Processes/Probability-Density-Function/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Probability Functions</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Probability-Density-Function/">Probability Density Function</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -508,7 +493,7 @@ gcd(a,b) = gcd(b,a mod b)
                     <span class="level-item">September 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">14</span>
+                    <span class="level-item tag">15</span>
                 </span>
             </a>
         </li>
@@ -553,6 +538,19 @@ gcd(a,b) = gcd(b,a mod b)
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-20T19:49:29.197Z">2019-09-20</time></div>
+                    <a href="/2019/09/20/Number-Theory/Greatest-Common-Divisor/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Greatest Common Divisor</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/number-theory/">number theory</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-20T18:57:54.824Z">2019-09-20</time></div>
                     <a href="/2019/09/20/Number-Theory/Introduce-Number-Theory/" class="title has-link-black-ter is-size-6 has-text-weight-normal">basic number theory</a>
                     <p class="is-size-7 is-uppercase">
@@ -601,19 +599,6 @@ gcd(a,b) = gcd(b,a mod b)
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-18T22:10:53.837Z">2019-09-18</time></div>
-                    <a href="/2019/09/18/Probability-and-Random-Processes/Probability-Density-Function/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Probability Functions</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Probability-Density-Function/">Probability Density Function</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -632,7 +617,7 @@ gcd(a,b) = gcd(b,a mod b)
                     <span class="level-item">September 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">14</span>
+                    <span class="level-item tag">15</span>
                 </span>
             </a>
         </li>
