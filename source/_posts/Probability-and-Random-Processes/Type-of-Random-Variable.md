@@ -15,6 +15,8 @@ $$
 p_{X}(x)=\left\{\begin{array}{ll}{1-p} & {\text { if } x=0} \\ {p} & {\text { if } x=1} \\ {0} & {\text { otherwise }}\end{array}\right.
 $$
 
+<!--more-->
+
 ### Binomial Random Variable
 
 $X \sim$ Binomial $(n, p),$ if its **PMF** has the following form:
