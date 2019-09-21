@@ -133,17 +133,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-20T19:49:29.197Z">2019-09-20</time>
+                <time class="level-item has-text-grey" datetime="2019-09-21T15:34:36.655Z">2019-09-21</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/number-theory/">number theory</a>
+                <a class="has-link-grey -link" href="/categories/Number-Theory/">Number Theory</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 279 words)
+                    a few seconds read (About 27 words)
                 </span>
                 
                 
@@ -152,25 +152,11 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/09/20/Number-Theory/Greatest-Common-Divisor/">Greatest Common Divisor</a>
+                <a class="has-link-black-ter" href="/2019/09/21/Ring_C/Number_Theory/Book/Euclidean_Algorithm/">Euclidean Algorithm</a>
             
         </h1>
         <div class="content">
-            <h2 id="greatest-common-divisorgcd">Greatest Common Divisor(GCD)</h2>
-<p>Here is another passage about <strong>GCD</strong>. That passage most consider GCD in algorithm, but here we will give prove.</p>
-<p>Common Divisor mean if <span class="math inline">\(a|b\)</span> and <span class="math inline">\(a|c\)</span> then <span class="math inline">\(a\)</span> is common divisor of <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span>.</p>
-<p>Greatest Common Divisor is the <em>Greatest</em> one of all common divisor of <span class="math inline">\(b,c\)</span>.</p>
-<p>For example, 12 and 8 have two common divisor, 2 and 4.</p>
-<p>To find out greatest common divisor is one of basic question in number theory.</p>
-<p>It look like easy for small numbers but we need to find a way to calculate the greatest common divisor as quickly as possible.</p>
-<p>if a|b then can <span class="math inline">\(a,b\)</span> have relationship expressed by <span class="math inline">\(a = bx + r\)</span>.</p>
-<p>Thus the great commont divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is equal to the great commont divisor of <span class="math inline">\(bx+r\)</span> and <span class="math inline">\(b\)</span>. Notice that <span class="math inline">\(b\)</span> dived by <span class="math inline">\(bx\)</span>. So great commont divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> equap great common divisor of <span class="math inline">\(b\)</span> and <span class="math inline">\(r\)</span>.</p>
-<p>explain more if <span class="math inline">\(c\)</span> is the great common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, then <span class="math inline">\(c|bx +r\)</span>. Because of <span class="math inline">\(c|b\)</span> thus <span class="math inline">\(c|bx\)</span>. we have <span class="math inline">\(c|bx+r\)</span> so c must divided by c.</p>
-<p>Here is a most important equation in this section <span class="math display">\[
-gcd(a,b) = gcd(a mod b,b)
-\]</span> considered some times <span class="math inline">\(x\)</span> may be zero means b bigger than a. So when write a computer program using recursion skill we need change the position of a$ and <span class="math inline">\(b\)</span>. Rewrite the equation in order to use in computer program. <span class="math display">\[
-gcd(a,b) = gcd(b,a mod b)
-\]</span> <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are(is) co-prime if we find out that the greatest common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is 1.</p>
+            <p>By <a href="https://chen-gz.github.io/2019/09/21/Ring_C/Number_Theory/Book/Chapter1_Divisibility/#corollary-1.4">Corollary 1.4</a>, any common divisor of <span class="math inline">\(b\)</span> and <span class="math inline">\(r\)</span> also divides <span class="math inline">\(qb+r=a\)</span>;</p>
 
         </div>
         
@@ -192,17 +178,17 @@ gcd(a,b) = gcd(b,a mod b)
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-20T18:57:54.824Z">2019-09-20</time>
+                <time class="level-item has-text-grey" datetime="2019-09-21T06:33:22.223Z">2019-09-21</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/number-theory/">number theory</a>
+                <a class="has-link-grey -link" href="/categories/Number-Theory/">Number Theory</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a minute read (About 220 words)
+                    2 minutes read (About 257 words)
                 </span>
                 
                 
@@ -211,23 +197,25 @@ gcd(a,b) = gcd(b,a mod b)
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/09/20/Number-Theory/Introduce-Number-Theory/">basic number theory</a>
+                <a class="has-link-black-ter" href="/2019/09/21/Ring_C/Number_Theory/Book/Chapter1_Divisibility/">Divisibility</a>
             
         </h1>
         <div class="content">
-            <h2 id="preface">preface</h2>
-<p>In the past hundred years, people thing number theory is the queen of math(math is the queen of science). we find it very interesting. In the number theory we can find many many amazing things. The conclusion is very short and very very beautify. But almost all of them are very hard to prove. This is very interesting things in the nature.</p>
-<p>Number theory is from integers. When we talk about number theory, always focus on positive not negative. We can find that first amazing thing of number theory is we only have integers. the most beautiful and easily thing in the world.</p>
-<p>In this passage will introduce some interest and basic information about number theory. I hope first passage of number theory is attractive and easy to read.</p>
-<h2 id="prime-number">prime number</h2>
-<p>prime number A <strong>prime number</strong> (or a <strong>prime</strong>) is a <a href="https://en.wikipedia.org/wiki/Natural_number" target="_blank" rel="noopener">natural number</a> greater than 1 that cannot be formed by multiplying two smaller natural numbers[from wikipedia].</p>
-<p>Such as 2,3,5,7,11,13,17 is prime number. Almost all problem of number theory is about prime number.</p>
-<p>Goldbach conjecture and most famous unsolved problem. We call............... twin prime like 3,5 or 11,13.</p>
-<p>We wander to know if the prime is very large, does there exist twin prime and the frequency of twin number.</p>
-<p>there all very interesting things.</p>
-
+            <h1 id="divisors">1.1 Divisors</h1>
+<h2 id="theorem-1.1">Theorem 1.1</h2>
+<p>If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are integers with <span class="math inline">\(b&gt;0\)</span>, then there is a unique pair of integers <span class="math inline">\(q\)</span> and <span class="math inline">\(r\)</span> such that <span class="math display">\[
+a = qb+r \quad and \quad 0 \leq r &lt; b.
+\]</span></p>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/09/21/Ring_C/Number_Theory/Book/Chapter1_Divisibility/#more">Read More</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -246,13 +234,17 @@ gcd(a,b) = gcd(b,a mod b)
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-20T18:17:51.317Z">2019-09-20</time>
+                <time class="level-item has-text-grey" datetime="2019-09-21T06:33:22.222Z">2019-09-21</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Number-Theory/">Number Theory</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 0 words)
+                    a few seconds read (About 11 words)
                 </span>
                 
                 
@@ -261,11 +253,11 @@ gcd(a,b) = gcd(b,a mod b)
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/09/20/Algorithm/Untitled/"></a>
+                <a class="has-link-black-ter" href="/2019/09/21/Ring_C/Number_Theory/Book/Chapter0_Preface/">Preface</a>
             
         </h1>
         <div class="content">
-            
+            <p>This branch contains the Theorems, Lemmas and Corollaries in the book.</p>
 
         </div>
         
@@ -287,10 +279,10 @@ gcd(a,b) = gcd(b,a mod b)
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-18T23:39:47.840Z">2019-09-18</time>
+                <time class="level-item has-text-grey" datetime="2019-09-21T06:33:22.220Z">2019-09-21</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Probability-Density-Function/">Probability Density Function</a>
+                <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
                 </div>
                 
                 
@@ -306,7 +298,7 @@ gcd(a,b) = gcd(b,a mod b)
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/09/18/Probability-and-Random-Processes/Type-of-Random-Variable/">Type of Random Variable</a>
+                <a class="has-link-black-ter" href="/2019/09/21/Probability-and-Random-Processes/Type-of-Random-Variable/">Type of Random Variable</a>
             
         </h1>
         <div class="content">
@@ -322,7 +314,7 @@ p_{X}(x)=\left\{\begin{array}{ll}{1-p} &amp; {\text { if } x=0} \\ {p} &amp; {\t
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/09/18/Probability-and-Random-Processes/Type-of-Random-Variable/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/2019/09/21/Probability-and-Random-Processes/Type-of-Random-Variable/#more">Read More</a>
                 </div>
             </div>
         </div>
@@ -344,17 +336,17 @@ p_{X}(x)=\left\{\begin{array}{ll}{1-p} &amp; {\text { if } x=0} \\ {p} &amp; {\t
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-18T22:20:02.187Z">2019-09-18</time>
+                <time class="level-item has-text-grey" datetime="2019-09-21T06:33:22.219Z">2019-09-21</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Probability-Density-Function/">Probability Density Function</a>
+                <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3 minutes read (About 451 words)
+                    2 minutes read (About 285 words)
                 </span>
                 
                 
@@ -363,19 +355,80 @@ p_{X}(x)=\left\{\begin{array}{ll}{1-p} &amp; {\text { if } x=0} \\ {p} &amp; {\t
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/09/18/Probability-and-Random-Processes/Conditional-Probability/">Probability Properties</a>
+                <a class="has-link-black-ter" href="/2019/09/21/Probability-and-Random-Processes/Sequence-Trail-Laws/">Sequence Trail Laws</a>
             
         </h1>
         <div class="content">
-            <h3 id="conditional-probability">Conditional Probability</h3>
-<p>Quite often we are interested in determining whether two events, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> , are related in the sense that knowledge about the occurrence of one, say <span class="math inline">\(B\)</span> , alters the likelihood of occurrence of the other, <span class="math inline">\(A\)</span> . This requires that we find the conditional probability, <span class="math inline">\(P[A | B],\)</span>of event <span class="math inline">\(A\)</span> given that event <span class="math inline">\(B\)</span> has occurred. The conditional probability is defined by</p>
+            <h2 id="multinomial-coefficient">Multinomial Coefficient</h2>
+<p>Suppose we partition a set of <span class="math inline">\(n\)</span> distinct objects into <span class="math inline">\(\mathcal{J}\)</span> subsets <span class="math inline">\(B_{1}, B_{2}, \ldots, B_{\mathcal{J}},\)</span> where <span class="math inline">\(B_{\mathcal{J}}\)</span> is assigned <span class="math inline">\(k_{\mathcal{J}}\)</span> elements and <span class="math inline">\(k_{1}+k_{2}+\cdots+k_{\mathcal{J}}=n .\)</span> <span class="math inline">\(\quad\)</span> In Problem <span class="math inline">\(2.61,\)</span> it is shown that the number of distinct partitions is <span class="math display">\[
+\frac{n !}{k_{1} ! k_{2} ! \ldots k_{J} !}
+\]</span> <span class="math inline">\(Equation 1\)</span>is called the <strong>multinomial coefficient</strong>. The <strong>binomial coefficient</strong> is the <span class="math inline">\(\mathcal{J}=2\)</span> case of the multinomial coefficient.</p>
+<h2 id="binomial-probability-law">Binomial Probability Law</h2>
+<p>Let <span class="math inline">\(k\)</span> be the number of successes in <span class="math inline">\(n\)</span> independent Bernoulli trials, then the probabilities of <span class="math inline">\(k\)</span> are given by the <strong>binomial probability law</strong>: <span class="math display">\[
+p_{n}(k)=\left(\begin{array}{l}{n} \\ {k}\end{array}\right) p^{k}(1-p)^{n-k} \quad$ for $\quad k=0, \ldots, n
+\]</span></p>
+<h2 id="multinomial-probability-law">multinomial probability law</h2>
+<p>Suppose that <span class="math inline">\(n\)</span> independent repetitions of the experiment are performed. Let <span class="math inline">\(k_{j}\)</span> be the number of times event <span class="math inline">\(B_{j}\)</span> occurs, then the vector <span class="math inline">\(\left(k_{1}, k_{2}, \ldots, k_{M}\right)\)</span> specifies the number of times each of the events <span class="math inline">\(B_{j}\)</span> occurs. The probability of the vector <span class="math inline">\(\left(k_{1}, \ldots, k_{M}\right)\)</span> satisfies the <strong>multinomial probability law</strong>: <span class="math display">\[
+P\left[\left(k_{1}, k_{2}, \ldots, k_{M}\right)\right]=\frac{n !}{k_{1} ! k_{2} ! \ldots k_{M} !} p_{1}^{k_{1}} p_{2}^{k_{2}} \cdots p_{M}^{k_{M}}
+\]</span> where <span class="math inline">\(k_{1}+k_{2}+\cdots+k_{M}=n .\)</span> The binomial probability law is the <span class="math inline">\(M=2\)</span> case of the multinomial probability law.</p>
+<h2 id="the-geometric-probability-law">The Geometric Probability Law</h2>
+<p>Consider a sequential experiment in which we repeat independent Bernoulli trials until the occurrence of the first success. The probability of this event is <span class="math display">\[
+p(m)=P\left[A_{1}^{c} A_{2}^{c} \ldots A_{m-1}^{c} A_{m}\right]=(1-p)^{m-1} p \quad m=1,2, \ldots
+\]</span></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-09-21T06:33:22.219Z">2019-09-21</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 minutes read (About 256 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/09/21/Probability-and-Random-Processes/Sample-Space-and-Event/">Sample Space and Event</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="the-sample-space">The Sample Space</h2>
+<p><strong>outcome</strong> or <strong>sample point</strong></p>
+<p>We define an outcome or sample point of a random experiment as a result that cannot be decomposed into other results. When we perform a random experiment, one and only one outcome occurs.</p>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/09/18/Probability-and-Random-Processes/Conditional-Probability/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/2019/09/21/Probability-and-Random-Processes/Sample-Space-and-Event/#more">Read More</a>
                 </div>
             </div>
         </div>
@@ -397,10 +450,68 @@ p_{X}(x)=\left\{\begin{array}{ll}{1-p} &amp; {\text { if } x=0} \\ {p} &amp; {\t
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-18T22:10:53.837Z">2019-09-18</time>
+                <time class="level-item has-text-grey" datetime="2019-09-21T06:33:22.218Z">2019-09-21</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Probability-Density-Function/">Probability Density Function</a>
+                <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a few seconds read (About 82 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/09/21/Probability-and-Random-Processes/Propery-of-Probability/">Propery of Probability</a>
+            
+        </h1>
+        <div class="content">
+            <p><span class="math inline">\(A\)</span> is event, <span class="math inline">\(S\)</span> is sample space.</p>
+<ul>
+<li><span class="math inline">\(0 \leq P[A]\)</span></li>
+<li><span class="math inline">\(P[S]=1\)</span></li>
+<li><p>If <span class="math inline">\(A \cap B=\varnothing,\)</span> then <span class="math inline">\(P[A \cup B]=P[A]+P[B]\)</span></p></li>
+<li><p><span class="math inline">\(P\left[A^{c}\right]=1-P[A]\)</span></p></li>
+<li><p><span class="math inline">\(P[A] \leq 1\)</span></p></li>
+<li><p><span class="math inline">\(P[\varnothing]=0\)</span></p></li>
+<li><p>If <span class="math inline">\(A_{1}, A_{2}, \ldots, A_{n}\)</span> are pairwise mutually exclusive, then <span class="math display">\[
+P\left[\bigcup_{k=1}^{n} A_{k}\right]=\sum_{k=1}^{n} P\left[A_{k}\right] \quad \text { for } n \geq 2
+\]</span></p></li>
+<li><span class="math inline">\(P[A \cup B]=P[A]+P[B]-P[A \cap B]\)</span></li>
+<li></li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-09-21T06:33:22.217Z">2019-09-21</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
                 </div>
                 
                 
@@ -416,7 +527,7 @@ p_{X}(x)=\left\{\begin{array}{ll}{1-p} &amp; {\text { if } x=0} \\ {p} &amp; {\t
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/09/18/Probability-and-Random-Processes/Probability-Density-Function/">Probability Functions</a>
+                <a class="has-link-black-ter" href="/2019/09/21/Probability-and-Random-Processes/Probability-Density-Function/">Probability Functions</a>
             
         </h1>
         <div class="content">
@@ -444,17 +555,17 @@ p_{X}(x)=\left\{\begin{array}{ll}{1-p} &amp; {\text { if } x=0} \\ {p} &amp; {\t
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-17T22:43:51.717Z">2019-09-17</time>
+                <time class="level-item has-text-grey" datetime="2019-09-21T06:33:22.216Z">2019-09-21</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/linear-control-system/">linear control system</a>
+                <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 18 words)
+                    3 minutes read (About 451 words)
                 </span>
                 
                 
@@ -463,71 +574,19 @@ p_{X}(x)=\left\{\begin{array}{ll}{1-p} &amp; {\text { if } x=0} \\ {p} &amp; {\t
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/09/17/Linear-Control-System/Contents/">Contents</a>
+                <a class="has-link-black-ter" href="/2019/09/21/Probability-and-Random-Processes/Conditional-Probability/">Probability Properties</a>
             
         </h1>
         <div class="content">
-            <p><a href="./Basic-Information">Basici Information</a></p>
-<p><a href="./Input-Output-Description">Input Output Description</a></p>
-<p><a href="./Linear-Time-Invariant">Linear Time Invariant(LTI) system</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-17T22:33:27.737Z">2019-09-17</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/linear-control-system/">linear control system</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/linear-control-system/Basic/">Basic</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a minute read (About 213 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/09/17/Linear-Control-System/Linear-Time-Invariant/">Linear Time-Invariant(LTI) Systems</a>
-            
-        </h1>
-        <div class="content">
-            <p><em>time invariant</em></p>
-<p>A system is said to be time invariant if for every state-input–output pair <span class="math display">\[
-\left.\begin{array}{l}{\mathbf{x}\left(t_{0}\right)} \\\ {\mathbf{u}(t), t \geq t_{0}}\end{array}\right\} \rightarrow \mathbf{y}(t), \quad t \geq t_{0}
-\]</span> and any <span class="math inline">\(T\)</span>, we have <span class="math display">\[
-\left.
-\begin{array}{l}{\mathbf{x}\left(t_{0}+T\right)} \\ {\mathbf{u}(t-T), t \geq t_{0}+T}\end{array}\right\} \rightarrow \mathbf{y}(t-T), t \geq t_{0}+T \quad \text { (time shifting) }
-\]</span></p>
+            <h3 id="conditional-probability">Conditional Probability</h3>
+<p>Quite often we are interested in determining whether two events, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> , are related in the sense that knowledge about the occurrence of one, say <span class="math inline">\(B\)</span> , alters the likelihood of occurrence of the other, <span class="math inline">\(A\)</span> . This requires that we find the conditional probability, <span class="math inline">\(P[A | B],\)</span>of event <span class="math inline">\(A\)</span> given that event <span class="math inline">\(B\)</span> has occurred. The conditional probability is defined by</p>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/09/17/Linear-Control-System/Linear-Time-Invariant/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/2019/09/21/Probability-and-Random-Processes/Conditional-Probability/#more">Read More</a>
                 </div>
             </div>
         </div>
@@ -549,17 +608,17 @@ p_{X}(x)=\left\{\begin{array}{ll}{1-p} &amp; {\text { if } x=0} \\ {p} &amp; {\t
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-17T22:24:13.627Z">2019-09-17</time>
+                <time class="level-item has-text-grey" datetime="2019-09-21T06:33:22.214Z">2019-09-21</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/linear-control-system/">linear control system</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/linear-control-system/Basic/">Basic</a>
+                <a class="has-link-grey -link" href="/categories/Power-Electric/">Power Electric</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 minutes read (About 548 words)
+                    4 minutes read (About 612 words)
                 </span>
                 
                 
@@ -568,74 +627,19 @@ p_{X}(x)=\left\{\begin{array}{ll}{1-p} &amp; {\text { if } x=0} \\ {p} &amp; {\t
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/09/17/Linear-Control-System/Input-Output-Description/">input-output description</a>
+                <a class="has-link-black-ter" href="/2019/09/21/Power-Electric/SEPIC-Converter/">SEPIC-Converter</a>
             
         </h1>
         <div class="content">
-            <p>Consequently, the input u(t) can be expressed symbolically as <span class="math display">\[
-u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \Delta
-\]</span></p>
+            <h2 id="sepic-converter">SEPIC-Converter</h2>
+<p>Single-ended primary-inductor converter</p>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/09/17/Linear-Control-System/Input-Output-Description/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-17T00:31:16.953Z">2019-09-16</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/linear-control-system/">linear control system</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/linear-control-system/Basic/">Basic</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    8 minutes read (About 1173 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/09/16/Linear-Control-System/Basic-Information/">Basic Information</a>
-            
-        </h1>
-        <div class="content">
-            <p>The systems to be studied in this categories are limited to linear systems. Using the concept of linearity, that every linear system can be described by <span class="math display">\[
-\mathbf{y}(t)=\int_{t_{0}}^{t} \mathbf{G}(t, \tau) \mathbf{u}(\tau) d \tau
-\]</span></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/09/16/Linear-Control-System/Basic-Information/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/2019/09/21/Power-Electric/SEPIC-Converter/#more">Read More</a>
                 </div>
             </div>
         </div>
@@ -705,7 +709,7 @@ u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \D
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        15
+                        19
                     </p>
                 </div>
             </div>
@@ -715,7 +719,7 @@ u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \D
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        6
+                        5
                     </p>
                 </div>
             </div>
@@ -765,31 +769,15 @@ u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \D
             </h3>
             <ul class="menu-list">
             <li>
-        <a class="level is-marginless" href="/categories/Probability-Density-Function/">
+        <a class="level is-marginless" href="/categories/Linear-Control-System/">
             <span class="level-start">
-                <span class="level-item">Probability Density Function</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">3</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/Probability-and-Random-Processes/">
-            <span class="level-start">
-                <span class="level-item">Probability and Random Processes</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/linear-control-system/">
-            <span class="level-start">
-                <span class="level-item">linear control system</span>
+                <span class="level-item">Linear Control System</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">4</span>
             </span>
         </a><ul><li>
-        <a class="level is-marginless" href="/categories/linear-control-system/Basic/">
+        <a class="level is-marginless" href="/categories/Linear-Control-System/Basic/">
             <span class="level-start">
                 <span class="level-item">Basic</span>
             </span>
@@ -797,20 +785,28 @@ u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \D
                 <span class="level-item tag">3</span>
             </span>
         </a></li></ul></li><li>
-        <a class="level is-marginless" href="/categories/number-theory/">
+        <a class="level is-marginless" href="/categories/Number-Theory/">
             <span class="level-start">
-                <span class="level-item">number theory</span>
+                <span class="level-item">Number Theory</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">5</span>
             </span>
         </a></li><li>
-        <a class="level is-marginless" href="/categories/power-electric/">
+        <a class="level is-marginless" href="/categories/Power-Electric/">
             <span class="level-start">
-                <span class="level-item">power electric</span>
+                <span class="level-item">Power Electric</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">4</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Probability-and-Random-Processes/">
+            <span class="level-start">
+                <span class="level-item">Probability and Random Processes</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
             </span>
         </a></li>
             </ul>
@@ -834,10 +830,10 @@ u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \D
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-20T19:49:29.197Z">2019-09-20</time></div>
-                    <a href="/2019/09/20/Number-Theory/Greatest-Common-Divisor/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Greatest Common Divisor</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T15:34:36.655Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/Ring_C/Number_Theory/Book/Euclidean_Algorithm/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Euclidean Algorithm</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/number-theory/">number theory</a>
+                        <a class="has-link-grey -link" href="/categories/Number-Theory/">Number Theory</a>
                     </p>
                 </div>
             </div>
@@ -847,10 +843,10 @@ u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \D
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-20T18:57:54.824Z">2019-09-20</time></div>
-                    <a href="/2019/09/20/Number-Theory/Introduce-Number-Theory/" class="title has-link-black-ter is-size-6 has-text-weight-normal">basic number theory</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T06:33:22.223Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/Ring_C/Number_Theory/Book/Chapter1_Divisibility/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Divisibility</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/number-theory/">number theory</a>
+                        <a class="has-link-grey -link" href="/categories/Number-Theory/">Number Theory</a>
                     </p>
                 </div>
             </div>
@@ -860,10 +856,10 @@ u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \D
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-20T18:17:51.317Z">2019-09-20</time></div>
-                    <a href="/2019/09/20/Algorithm/Untitled/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T06:33:22.222Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/Ring_C/Number_Theory/Book/Chapter0_Preface/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Preface</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/Number-Theory/">Number Theory</a>
                     </p>
                 </div>
             </div>
@@ -873,10 +869,10 @@ u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \D
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-18T23:39:47.840Z">2019-09-18</time></div>
-                    <a href="/2019/09/18/Probability-and-Random-Processes/Type-of-Random-Variable/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Type of Random Variable</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T06:33:22.220Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/Probability-and-Random-Processes/Type-of-Random-Variable/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Type of Random Variable</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Probability-Density-Function/">Probability Density Function</a>
+                        <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
                     </p>
                 </div>
             </div>
@@ -886,10 +882,10 @@ u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \D
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-18T22:20:02.187Z">2019-09-18</time></div>
-                    <a href="/2019/09/18/Probability-and-Random-Processes/Conditional-Probability/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Probability Properties</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T06:33:22.219Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/Probability-and-Random-Processes/Sequence-Trail-Laws/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Sequence Trail Laws</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Probability-Density-Function/">Probability Density Function</a>
+                        <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
                     </p>
                 </div>
             </div>
@@ -913,7 +909,7 @@ u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \D
                     <span class="level-item">September 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">15</span>
+                    <span class="level-item tag">19</span>
                 </span>
             </a>
         </li>
@@ -958,10 +954,10 @@ u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \D
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-20T19:49:29.197Z">2019-09-20</time></div>
-                    <a href="/2019/09/20/Number-Theory/Greatest-Common-Divisor/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Greatest Common Divisor</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T15:34:36.655Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/Ring_C/Number_Theory/Book/Euclidean_Algorithm/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Euclidean Algorithm</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/number-theory/">number theory</a>
+                        <a class="has-link-grey -link" href="/categories/Number-Theory/">Number Theory</a>
                     </p>
                 </div>
             </div>
@@ -971,10 +967,10 @@ u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \D
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-20T18:57:54.824Z">2019-09-20</time></div>
-                    <a href="/2019/09/20/Number-Theory/Introduce-Number-Theory/" class="title has-link-black-ter is-size-6 has-text-weight-normal">basic number theory</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T06:33:22.223Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/Ring_C/Number_Theory/Book/Chapter1_Divisibility/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Divisibility</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/number-theory/">number theory</a>
+                        <a class="has-link-grey -link" href="/categories/Number-Theory/">Number Theory</a>
                     </p>
                 </div>
             </div>
@@ -984,10 +980,10 @@ u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \D
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-20T18:17:51.317Z">2019-09-20</time></div>
-                    <a href="/2019/09/20/Algorithm/Untitled/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T06:33:22.222Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/Ring_C/Number_Theory/Book/Chapter0_Preface/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Preface</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/Number-Theory/">Number Theory</a>
                     </p>
                 </div>
             </div>
@@ -997,10 +993,10 @@ u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \D
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-18T23:39:47.840Z">2019-09-18</time></div>
-                    <a href="/2019/09/18/Probability-and-Random-Processes/Type-of-Random-Variable/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Type of Random Variable</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T06:33:22.220Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/Probability-and-Random-Processes/Type-of-Random-Variable/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Type of Random Variable</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Probability-Density-Function/">Probability Density Function</a>
+                        <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
                     </p>
                 </div>
             </div>
@@ -1010,10 +1006,10 @@ u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \D
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-18T22:20:02.187Z">2019-09-18</time></div>
-                    <a href="/2019/09/18/Probability-and-Random-Processes/Conditional-Probability/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Probability Properties</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T06:33:22.219Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/Probability-and-Random-Processes/Sequence-Trail-Laws/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Sequence Trail Laws</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Probability-Density-Function/">Probability Density Function</a>
+                        <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
                     </p>
                 </div>
             </div>
@@ -1037,7 +1033,7 @@ u(t) \approx \sum_{i} u\left(t_{i}\right) \delta_{\Delta}\left(t-t_{i}\right) \D
                     <span class="level-item">September 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">15</span>
+                    <span class="level-item tag">19</span>
                 </span>
             </a>
         </li>
