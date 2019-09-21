@@ -7,21 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Probability Functions - Dog and Cat</title>
+<title>Type of Discrete Random Variable - Dog and Cat</title>
 
 
-    <meta name="description" content="PDF Continuous random variables are characterized by probability density function(PDF). CDF">
+    <meta name="description" content="Uniform Random Variable For each \(k\) in \(S_{X},\) we have \(p_{X}(k)=1 / M\). \(X \sim\) Uniform \((a, b),\) if its PMF has the following form: \[ p_{X}(x)=\left\{\begin{array}{ll}{\frac{1}{b-a+">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Probability Functions">
-<meta property="og:url" content="https://chen-gz.github.io/2019/09/21/Probability-and-Random-Processes/Probability-Density-Function/index.html">
+<meta property="og:title" content="Type of Discrete Random Variable">
+<meta property="og:url" content="https://chen-gz.github.io/2019/09/21/Probability-and-Random-Processes/Type-of-Discrete-Random-Variable/index.html">
 <meta property="og:site_name" content="Dog and Cat">
-<meta property="og:description" content="PDF Continuous random variables are characterized by probability density function(PDF). CDF">
+<meta property="og:description" content="Uniform Random Variable For each \(k\) in \(S_{X},\) we have \(p_{X}(k)=1 / M\). \(X \sim\) Uniform \((a, b),\) if its PMF has the following form: \[ p_{X}(x)=\left\{\begin{array}{ll}{\frac{1}{b-a+">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://chen-gz.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-09-21T06:33:22.217Z">
+<meta property="og:updated_time" content="2019-09-21T15:53:01.268Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Probability Functions">
-<meta name="twitter:description" content="PDF Continuous random variables are characterized by probability density function(PDF). CDF">
+<meta name="twitter:title" content="Type of Discrete Random Variable">
+<meta name="twitter:description" content="Uniform Random Variable For each \(k\) in \(S_{X},\) we have \(p_{X}(k)=1 / M\). \(X \sim\) Uniform \((a, b),\) if its PMF has the following form: \[ p_{X}(x)=\left\{\begin{array}{ll}{\frac{1}{b-a+">
 <meta name="twitter:image" content="https://chen-gz.github.io/images/og_image.png">
 
 
@@ -89,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/jojo.svg" alt="Probability Functions" height="28">
+                <img src="/images/jojo.svg" alt="Type of Discrete Random Variable" height="28">
             
             </a>
         </div>
@@ -140,7 +140,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-21T06:33:22.217Z">2019-09-21</time>
+                <time class="level-item has-text-grey" datetime="2019-09-21T15:53:01.267Z">2019-09-21</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
@@ -150,7 +150,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 12 words)
+                    4 minutes read (About 670 words)
                 </span>
                 
                 
@@ -159,13 +159,78 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Probability Functions
+                Type of Discrete Random Variable
             
         </h1>
         <div class="content">
-            <h3 id="pdf">PDF</h3>
-<p>Continuous random variables are characterized by probability density function(PDF).</p>
-<h3 id="cdf">CDF</h3>
+            <h2 id="uniform-random-variable">Uniform Random Variable</h2>
+<p>For each <span class="math inline">\(k\)</span> in <span class="math inline">\(S_{X},\)</span> we have <span class="math inline">\(p_{X}(k)=1 / M\)</span>.</p>
+<p><span class="math inline">\(X \sim\)</span> Uniform <span class="math inline">\((a, b),\)</span> if its PMF has the following form: <span class="math display">\[
+p_{X}(x)=\left\{\begin{array}{ll}{\frac{1}{b-a+1}} &amp; {\text { if } x=a, a+1, \cdots, b} \\ {0} &amp; {\text { otherwise }}\end{array}\right.
+\]</span></p>
+<a id="more"></a>
+<ul>
+<li><span class="math inline">\(E[X] = \frac{a+b}{2}\)</span></li>
+<li><span class="math inline">\(\operatorname{Var}[X]=\frac{(b-a+1)^{2}-1}{12}=\frac{(b-a)(b-a+2)}{12}\)</span></li>
+</ul>
+<h2 id="bernoulli-random-variable">Bernoulli Random Variable</h2>
+<p>Used for experiments with two outcomes of interest: The success or failure of an experiment</p>
+<p><span class="math inline">\(X \sim\)</span> Bernoulli <span class="math inline">\((p),\)</span> if its <strong>PMF</strong> has the following form:</p>
+<p><span class="math display">\[
+p_{X}(x)=\left\{\begin{array}{ll}{1-p} &amp; {\text { if } x=0} \\ {p} &amp; {\text { if } x=1} \\ {0} &amp; {\text { otherwise }}\end{array}\right.
+\]</span> * <span class="math inline">\(S_X = \{0,1\}\)</span> * Mean: <span class="math inline">\(E[X] = p\)</span> * <span class="math inline">\(VAR[X]=p(1-p)\)</span></p>
+<h2 id="binomial-random-variable">Binomial Random Variable</h2>
+<p>Used for experiments that involve n independent trials of the Bernoulli experiment:</p>
+<p><span class="math inline">\(X \sim\)</span> Binomial <span class="math inline">\((n, p),\)</span> if its <strong>PMF</strong> has the following form: <span class="math display">\[
+p_{X}(x)=\left\{\begin{array}{ll}{\left(\begin{array}{l}{n} \\ {x}\end{array}\right) p^{x}(1-p)^{n-x}} &amp; {\text { if } x=\{0,1, \cdots, n\}} \\ {0} &amp; {\text { otherwise. }}\end{array}\right.
+\]</span></p>
+<ul>
+<li><p>Mean: <span class="math inline">\(E[X] = np\)</span></p></li>
+<li><p>Variance: <span class="math inline">\(Var[X] = np(1-p)\)</span></p></li>
+</ul>
+<h2 id="geometric-random-variable">Geometric Random Variable</h2>
+<p>$ X $ Geometric <span class="math inline">\((p),\)</span> if its PMF has the following form: <span class="math display">\[
+p_{X}(x)=\left\{\begin{array}{ll}{p(1-p)^{x-1}} &amp; {\text { if } x=1,2,3, \cdots} \\ {0} &amp; {\text { otherwise }}\end{array}\right.
+\]</span></p>
+<ul>
+<li>Mean: <span class="math inline">\(E[x] = \frac{1}{p}\)</span></li>
+<li>Variance: <span class="math inline">\(Var[X] = \frac{1-p}{p^2}\)</span></li>
+<li><strong>notice that if <span class="math inline">\(x\)</span> begin from <span class="math inline">\(0\)</span>, the mean is <span class="math inline">\(E(x) = \frac{1-p}{p}\)</span>.</strong></li>
+</ul>
+<h2 id="pascal-random-variablenegtive-binomial-distribution">Pascal Random Variable(Negtive binomial Distribution)</h2>
+<p>For an infinite sequence of Benoulli trials each with probability <span class="math inline">\(p\)</span>, the Pascal random variable is the number of trials up to and including the <span class="math inline">\(k\)</span>th success.</p>
+<p>To derive the Pascal <span class="math inline">\(PMF\)</span>, we consider the scenario of finding the <span class="math inline">\(k\)</span> th success in the <span class="math inline">\(x\)</span> th trial: there are exactly <span class="math inline">\((k-1)\)</span> successes in the previous <span class="math inline">\((x-1)\)</span> trials, and the <span class="math inline">\(k\)</span> th success occurs in the <span class="math inline">\(x\)</span> th trial. The probability of this event is:</p>
+<p><span class="math display">\[
+P\{X=x\}=\left(\begin{array}{l}{x-1} \\ {k-1}\end{array}\right) p^{k-1}(1-p)^{(x-1)-(k-1)} \cdot p
+\]</span></p>
+<p><span class="math inline">\(X \sim\)</span> Pascal <span class="math inline">\((k, p),\)</span> if its PMF has the following form: <span class="math display">\[
+p_{X}(x)=\left\{\begin{array}{ll}{\left(\begin{array}{c}{x-1} \\ {k-1}\end{array}\right) p^{k}(1-p)^{(x-1)-(k-1)} \text { if } x=k, k+1, k+2, \cdots} \\ {0} &amp; {\text { otherwise. }}\end{array}\right.
+\]</span></p>
+<ul>
+<li>Mean: <span class="math inline">\(E[X]=\frac{k}{p}\)</span></li>
+<li>Variance: <span class="math inline">\(\operatorname{Var}[X]=\frac{k(1-p)}{p^{2}}\)</span>.</li>
+</ul>
+<h2 id="poisson-random-variable">Poisson Random Variable</h2>
+<p>Used to describe phenomenon that occur randomly in time. While the time of each occurrence is completely random, there is a known average number of occurrences per unit time.</p>
+<p>In many applications, we are interested in counting the number of occurrences of an event in a certain time period or in a certain region in space. The Poisson random variable arises in situations where the events occur “completely at random” in time or space.</p>
+<p><span class="math inline">\(X \sim\)</span> Poisson <span class="math inline">\((\alpha),\)</span> if its PMF has the following form: <span class="math display">\[
+p_{X}(x)=\left\{\begin{array}{ll}{\frac{\alpha^{x}}{x !} e^{-\alpha}} &amp; {\text { if } x=0,1,2, \cdots} \\ {0} &amp; {\text { otherwise. }}\end{array}\right.
+\]</span> where the parameter <span class="math inline">\(\alpha&gt;0\)</span>.</p>
+<p><strong>When dealing with problems involving time <span class="math inline">\(t\)</span> with an arrival rate of <span class="math inline">\(\lambda\)</span> for an event, the Poisson probability of <span class="math inline">\(x\)</span> arrivals in time <span class="math inline">\(t\)</span> is found by setting the Poisson parameter <span class="math inline">\(\alpha=\lambda t\)</span></strong></p>
+<ul>
+<li><span class="math inline">\(E[X] = \alpha\)</span></li>
+<li><span class="math inline">\(Var[X] = \alpha\)</span></li>
+</ul>
+<h2 id="zipf-random-variable">Zipf Random Variable</h2>
+<p>Used to account for the relative popularity of a few members of a population and the relative uncertainty of other members of a population:</p>
+<p><span class="math inline">\(X \sim \operatorname{Zipf}(\alpha, L),\)</span> if its <span class="math inline">\(PMF\)</span> has the following form: <span class="math display">\[
+p_{X}(x)=\left\{\begin{array}{ll}{\frac{1}{c_{L}} \frac{1}{x^{\alpha}}} &amp; {\text { if } x=0,1,2, \cdots L} \\ {0} &amp; {\text { otherwise }}\end{array}\right.
+\]</span> where the parameter <span class="math inline">\(c_{L}\)</span> is a normalization factor, and <span class="math inline">\(\alpha \geq 0\)</span></p>
+<p>For <span class="math inline">\(\alpha=1,\)</span> the Zipf random variable has</p>
+<ul>
+<li>$  E[X]=$</li>
+<li><span class="math inline">\(\text { Variance: } \operatorname{Var}[X]=\frac{L(L+1)}{2 c_{L}}-\frac{L^{2}}{c_{L}^{2}}\)</span></li>
+</ul>
 
         </div>
         
@@ -181,6 +246,21 @@
         <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
         <div class="buttons is-centered">
             
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<a class="button is-warning donate" onclick="document.getElementById(&#39;paypal-donate-form&#39;).submit()">
+    <span class="icon is-small">
+        <i class="fab fa-paypal"></i>
+    </span>
+    <span>Paypal</span>
+</a>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="paypal-donate-form">
+    <input type="hidden" name="cmd" value="_donations" />
+    <input type="hidden" name="business" value="chen-gz@outlook.com" />
+    <input type="hidden" name="currency_code" value="USD" />
+</form>
+
+                
         </div>
     </div>
 </div>
@@ -190,17 +270,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/21/Probability-and-Random-Processes/Propery-of-Probability/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Propery of Probability</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/21/Probability-and-Random-Processes/Conditional-Probability/">
-                <span class="level-item">Probability Properties</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/21/Probability-and-Random-Processes/Type-of-Continuous-Random-Variable/">
+                <span class="level-item">Type of Continuous Random Variable</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -220,7 +293,7 @@
     js.src = "//connect.facebook.net/en/sdk.js#xfbml=1&version=v2.8";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-comments" data-width="100%" data-href="https://chen-gz.github.io/2019/09/21/Probability-and-Random-Processes/Probability-Density-Function/" data-num-posts="5"></div>
+<div class="fb-comments" data-width="100%" data-href="https://chen-gz.github.io/2019/09/21/Probability-and-Random-Processes/Type-of-Discrete-Random-Variable/" data-num-posts="5"></div>
 
     </div>
 </div>
@@ -259,7 +332,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        19
+                        20
                     </p>
                 </div>
             </div>
@@ -312,13 +385,33 @@
                 Catalogue
             </h3>
             <ul class="menu-list"><li>
-        <a class="is-flex" href="#pdf">
+        <a class="is-flex" href="#uniform-random-variable">
         <span class="has-mr-6">1</span>
-        <span>PDF</span>
+        <span>Uniform Random Variable</span>
         </a></li><li>
-        <a class="is-flex" href="#cdf">
+        <a class="is-flex" href="#bernoulli-random-variable">
         <span class="has-mr-6">2</span>
-        <span>CDF</span>
+        <span>Bernoulli Random Variable</span>
+        </a></li><li>
+        <a class="is-flex" href="#binomial-random-variable">
+        <span class="has-mr-6">3</span>
+        <span>Binomial Random Variable</span>
+        </a></li><li>
+        <a class="is-flex" href="#geometric-random-variable">
+        <span class="has-mr-6">4</span>
+        <span>Geometric Random Variable</span>
+        </a></li><li>
+        <a class="is-flex" href="#pascal-random-variablenegtive-binomial-distribution">
+        <span class="has-mr-6">5</span>
+        <span>Pascal Random Variable(Negtive binomial Distribution)</span>
+        </a></li><li>
+        <a class="is-flex" href="#poisson-random-variable">
+        <span class="has-mr-6">6</span>
+        <span>Poisson Random Variable</span>
+        </a></li><li>
+        <a class="is-flex" href="#zipf-random-variable">
+        <span class="has-mr-6">7</span>
+        <span>Zipf Random Variable</span>
         </a></li></ul>
         </div>
     </div>
@@ -375,7 +468,7 @@
                 <span class="level-item">Probability and Random Processes</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">6</span>
+                <span class="level-item tag">7</span>
             </span>
         </a></li>
             </ul>
@@ -399,62 +492,62 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T15:53:01.267Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/Probability-and-Random-Processes/Type-of-Discrete-Random-Variable/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Type of Discrete Random Variable</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T15:53:01.267Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/Probability-and-Random-Processes/Type-of-Continuous-Random-Variable/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Type of Continuous Random Variable</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T15:53:01.266Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/Probability-and-Random-Processes/Propety-of-Probability/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Propety of Probability</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T15:53:01.266Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/Probability-and-Random-Processes/Probability-Functions/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Probability Functions</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T15:34:36.655Z">2019-09-21</time></div>
                     <a href="/2019/09/21/Ring_C/Number_Theory/Book/Euclidean_Algorithm/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Euclidean Algorithm</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Number-Theory/">Number Theory</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T06:33:22.223Z">2019-09-21</time></div>
-                    <a href="/2019/09/21/Ring_C/Number_Theory/Book/Chapter1_Divisibility/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Divisibility</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Number-Theory/">Number Theory</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T06:33:22.222Z">2019-09-21</time></div>
-                    <a href="/2019/09/21/Ring_C/Number_Theory/Book/Chapter0_Preface/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Preface</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Number-Theory/">Number Theory</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T06:33:22.220Z">2019-09-21</time></div>
-                    <a href="/2019/09/21/Probability-and-Random-Processes/Type-of-Random-Variable/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Type of Random Variable</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T06:33:22.219Z">2019-09-21</time></div>
-                    <a href="/2019/09/21/Probability-and-Random-Processes/Sequence-Trail-Laws/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Sequence Trail Laws</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
                     </p>
                 </div>
             </div>
@@ -478,7 +571,7 @@
                     <span class="level-item">September 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">19</span>
+                    <span class="level-item tag">20</span>
                 </span>
             </a>
         </li>
@@ -523,62 +616,62 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T15:53:01.267Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/Probability-and-Random-Processes/Type-of-Discrete-Random-Variable/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Type of Discrete Random Variable</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T15:53:01.267Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/Probability-and-Random-Processes/Type-of-Continuous-Random-Variable/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Type of Continuous Random Variable</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T15:53:01.266Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/Probability-and-Random-Processes/Propety-of-Probability/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Propety of Probability</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T15:53:01.266Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/Probability-and-Random-Processes/Probability-Functions/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Probability Functions</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T15:34:36.655Z">2019-09-21</time></div>
                     <a href="/2019/09/21/Ring_C/Number_Theory/Book/Euclidean_Algorithm/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Euclidean Algorithm</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Number-Theory/">Number Theory</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T06:33:22.223Z">2019-09-21</time></div>
-                    <a href="/2019/09/21/Ring_C/Number_Theory/Book/Chapter1_Divisibility/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Divisibility</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Number-Theory/">Number Theory</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T06:33:22.222Z">2019-09-21</time></div>
-                    <a href="/2019/09/21/Ring_C/Number_Theory/Book/Chapter0_Preface/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Preface</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Number-Theory/">Number Theory</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T06:33:22.220Z">2019-09-21</time></div>
-                    <a href="/2019/09/21/Probability-and-Random-Processes/Type-of-Random-Variable/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Type of Random Variable</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T06:33:22.219Z">2019-09-21</time></div>
-                    <a href="/2019/09/21/Probability-and-Random-Processes/Sequence-Trail-Laws/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Sequence Trail Laws</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Probability-and-Random-Processes/">Probability and Random Processes</a>
                     </p>
                 </div>
             </div>
@@ -602,7 +695,7 @@
                     <span class="level-item">September 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">19</span>
+                    <span class="level-item tag">20</span>
                 </span>
             </a>
         </li>
@@ -637,7 +730,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/jojo.svg" alt="Probability Functions" height="28">
+                    <img src="/images/jojo.svg" alt="Type of Discrete Random Variable" height="28">
                 
                 </a>
                 <p class="is-size-7">
